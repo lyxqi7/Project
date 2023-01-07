@@ -53,7 +53,7 @@ def process_download(sock, chunkfile, outputfile):
     # |2byte  header len |2byte pkt len  |
     # |      4byte  seq                  |
     # |      4byte  ack                  |
-    whohas_header = struct.pack("HBBHHII", socket.htons(52305), 35, 0, socket.htons(HEADER_LEN),
+    whohas_header = struct.pack("HBBHHII", socket.htons(52305), 44, 0, socket.htons(HEADER_LEN),
                                 socket.htons(HEADER_LEN + len(download_hash)), socket.htonl(0), socket.htonl(0))
     whohas_pkt = whohas_header + download_hash
 
