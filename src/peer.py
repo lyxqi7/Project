@@ -203,7 +203,7 @@ if __name__ == '__main__':
     parser.add_argument('-m', type=int, help='<maxconn>      Max # of concurrent sending')
     parser.add_argument('-i', type=int, help='<identity>     Which peer # am I?')
     parser.add_argument('-v', type=int, help='verbose level', default=0)
-    parser.add_argument('-t', type=int, help="pre-defined timeout", default=0)
+    parser.add_argument('-t', type=int, help="pre-defined timeout", default=3)
     args = parser.parse_args()
 
     config = bt_utils.BtConfig(args)
