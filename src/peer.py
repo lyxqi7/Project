@@ -31,6 +31,7 @@ ssthresh = 64
 cwnd = 1
 ack_now = 0
 dupACKcount = 0
+timer = dict()
 
 
 def process_download(sock, chunkfile, outputfile):
@@ -75,6 +76,7 @@ def process_inbound_udp(sock):
     global config
     global ack_now
     global dupACKcount
+    global timer
     global ex_sending_chunkhash
     pkt, from_addr = sock.recvfrom(BUF_SIZE)
     Magic, Team, Type, hlen, plen, Seq, Ack = struct.unpack("HBBHHII", pkt[:HEADER_LEN])
@@ -116,6 +118,7 @@ def process_inbound_udp(sock):
     elif Type == 3:
         # received a DATA pkt
         ex_received_chunk[ex_downloading_chunkhash] += data
+        del timer[str(socket.ntohl(Seq))]
 
         # send back ACK
         ack_pkt = struct.pack("HBBHHII", socket.htons(52305), 44, 4, socket.htons(HEADER_LEN), socket.htons(HEADER_LEN),
@@ -169,20 +172,7 @@ def process_inbound_udp(sock):
                                       socket.htons(HEADER_LEN + len(next_data)), socket.htonl(ack_num + 1), 0)
             sock.sendto(data_header + next_data, from_addr)
 
-
-            # 检测超时重传
-            start_time = time.time()
-            while True:
-                ready = select.select([sock, sys.stdin], [], [], 0.1)
-                read_ready = ready[0]
-                if len(read_ready) > 0:
-                    if sock in read_ready:
-                        break
-                if time.time() - start_time > config.timeout:
-                    print("!!!!!!!!!!!!!!!!Retransmitted")
-                    sock.sendto(data_header + next_data, from_addr)
-                    break
-                time.sleep(0.1)
+            timer[str(ack_num + 1)] = [time.time(), from_addr, data_header + next_data] # 给data包一个定时器
 
 
 def process_user_input(sock):
@@ -201,6 +191,10 @@ def peer_run(config):
         while True:
             ready = select.select([sock, sys.stdin], [], [], 0.1)
             read_ready = ready[0]
+            for i in timer.keys():  # 超时重传
+                if time.time() - timer[i][0] > config.timeout:
+                    sock.sendto(timer[i][2], timer[i][1])
+
             if len(read_ready) > 0:
                 if sock in read_ready:
                     process_inbound_udp(sock)
