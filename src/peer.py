@@ -1,5 +1,6 @@
 import sys
 import os
+import time
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import select
@@ -55,7 +56,7 @@ def process_download(sock, chunkfile, outputfile):
     # |      4byte  ack                  |
     whohas_header = struct.pack("HBBHHII", socket.htons(52305), 44, 0, socket.htons(HEADER_LEN),
                                 socket.htons(HEADER_LEN + len(download_hash)), socket.htonl(0), socket.htonl(0))
-    whohas_pkt = whohas_header + download_hash
+    whohas_pkt = whohas_header + download_hash    # 谁有含这些hash的chunk
 
     # Step3: flooding whohas to all peers in peer list
     peer_list = config.peers
@@ -114,6 +115,8 @@ def process_inbound_udp(sock):
                               0, Seq)
         sock.sendto(ack_pkt, from_addr)
 
+
+
         # see if finished
         if len(ex_received_chunk[ex_downloading_chunkhash]) == CHUNK_DATA_SIZE:
             # finished downloading this chunkdata!
@@ -156,6 +159,18 @@ def process_inbound_udp(sock):
                                       socket.htons(HEADER_LEN + len(next_data)), socket.htonl(ack_num + 1), 0)
             sock.sendto(data_header + next_data, from_addr)
 
+            start_time = time.time()
+            while True:
+                ready = select.select([sock, sys.stdin], [], [], 0.1)
+                read_ready = ready[0]
+                if len(read_ready) > 0:
+                    if sock in read_ready:
+                        break
+                if time.time() - start_time > config.timeout:
+                    sock.sendto(data_header + next_data, from_addr)
+                    break
+    
+
 
 def process_user_input(sock):
     command, chunkf, outf = input().split(' ')
@@ -169,12 +184,14 @@ def peer_run(config):
     addr = (config.ip, config.port)
     sock = simsocket.SimSocket(config.identity, addr, verbose=config.verbose)
 
+
     try:
         while True:
             ready = select.select([sock, sys.stdin], [], [], 0.1)
             read_ready = ready[0]
             if len(read_ready) > 0:
                 if sock in read_ready:
+                    # start_time = time.time()
                     process_inbound_udp(sock)
                 if sys.stdin in read_ready:
                     process_user_input(sock)
