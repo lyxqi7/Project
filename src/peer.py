@@ -24,8 +24,13 @@ HEADER_LEN = struct.calcsize("HBBHHII")
 config = None
 ex_output_file = None
 ex_received_chunk = dict()
+ACK_dict = dict()
 ex_downloading_chunkhash = ""
 MAX_PAYLOAD = 1024
+ssthresh = 64
+cwnd = 1
+ack_now = 0
+dupACKcount = 0
 
 
 def process_download(sock, chunkfile, outputfile):
@@ -56,7 +61,7 @@ def process_download(sock, chunkfile, outputfile):
     # |      4byte  ack                  |
     whohas_header = struct.pack("HBBHHII", socket.htons(52305), 44, 0, socket.htons(HEADER_LEN),
                                 socket.htons(HEADER_LEN + len(download_hash)), socket.htonl(0), socket.htonl(0))
-    whohas_pkt = whohas_header + download_hash    # 谁有含这些hash的chunk
+    whohas_pkt = whohas_header + download_hash  # 谁有含这些hash的chunk
 
     # Step3: flooding whohas to all peers in peer list
     peer_list = config.peers
@@ -68,6 +73,8 @@ def process_download(sock, chunkfile, outputfile):
 def process_inbound_udp(sock):
     # Receive pkt
     global config
+    global ack_now
+    global dupACKcount
     global ex_sending_chunkhash
     pkt, from_addr = sock.recvfrom(BUF_SIZE)
     Magic, Team, Type, hlen, plen, Seq, Ack = struct.unpack("HBBHHII", pkt[:HEADER_LEN])
@@ -113,9 +120,10 @@ def process_inbound_udp(sock):
         # send back ACK
         ack_pkt = struct.pack("HBBHHII", socket.htons(52305), 44, 4, socket.htons(HEADER_LEN), socket.htons(HEADER_LEN),
                               0, Seq)
+        if ack_now != socket.ntohl(Seq):
+            dupACKcount = 0
+        ack_now = socket.ntohl(Seq)
         sock.sendto(ack_pkt, from_addr)
-
-
 
         # see if finished
         if len(ex_received_chunk[ex_downloading_chunkhash]) == CHUNK_DATA_SIZE:
@@ -145,6 +153,8 @@ def process_inbound_udp(sock):
     elif Type == 4:
         # received an ACK pkt
         ack_num = socket.ntohl(Ack)
+        if ack_num == ack_now:
+            dupACKcount += 1
         if (ack_num) * MAX_PAYLOAD >= CHUNK_DATA_SIZE:
             # finished
             print(f"finished sending {ex_sending_chunkhash}")
@@ -159,6 +169,8 @@ def process_inbound_udp(sock):
                                       socket.htons(HEADER_LEN + len(next_data)), socket.htonl(ack_num + 1), 0)
             sock.sendto(data_header + next_data, from_addr)
 
+
+            # 检测超时重传
             start_time = time.time()
             while True:
                 ready = select.select([sock, sys.stdin], [], [], 0.1)
@@ -167,9 +179,10 @@ def process_inbound_udp(sock):
                     if sock in read_ready:
                         break
                 if time.time() - start_time > config.timeout:
+                    print("!!!!!!!!!!!!!!!!Retransmitted")
                     sock.sendto(data_header + next_data, from_addr)
                     break
-    
+                time.sleep(0.1)
 
 
 def process_user_input(sock):
@@ -184,14 +197,12 @@ def peer_run(config):
     addr = (config.ip, config.port)
     sock = simsocket.SimSocket(config.identity, addr, verbose=config.verbose)
 
-
     try:
         while True:
             ready = select.select([sock, sys.stdin], [], [], 0.1)
             read_ready = ready[0]
             if len(read_ready) > 0:
                 if sock in read_ready:
-                    # start_time = time.time()
                     process_inbound_udp(sock)
                 if sys.stdin in read_ready:
                     process_user_input(sock)
