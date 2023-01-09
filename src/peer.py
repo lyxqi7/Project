@@ -27,10 +27,6 @@ ex_received_chunk = dict()
 ACK_dict = dict()
 ex_downloading_chunkhash = ""
 MAX_PAYLOAD = 1024
-ssthresh = 64
-cwnd = 1
-ack_now = 0
-dupACKcount = 0
 timer = dict()
 
 
@@ -74,9 +70,8 @@ def process_download(sock, chunkfile, outputfile):
 def process_inbound_udp(sock):
     # Receive pkt
     global config
-    global ack_now
-    global dupACKcount
     global timer
+    global ACK_dict
     global ex_sending_chunkhash
     pkt, from_addr = sock.recvfrom(BUF_SIZE)
     Magic, Team, Type, hlen, plen, Seq, Ack = struct.unpack("HBBHHII", pkt[:HEADER_LEN])
@@ -118,14 +113,15 @@ def process_inbound_udp(sock):
     elif Type == 3:
         # received a DATA pkt
         ex_received_chunk[ex_downloading_chunkhash] += data
-        del timer[str(socket.ntohl(Seq))]
+        del timer[str(from_addr)+str(socket.ntohl(Seq))]
 
         # send back ACK
         ack_pkt = struct.pack("HBBHHII", socket.htons(52305), 44, 4, socket.htons(HEADER_LEN), socket.htons(HEADER_LEN),
                               0, Seq)
-        if ack_now != socket.ntohl(Seq):
-            dupACKcount = 0
-        ack_now = socket.ntohl(Seq)
+
+        if ACK_dict.setdefault(str(from_addr)+str(socket.ntohl(Seq))) is None:
+            ACK_dict[str(from_addr)+str(socket.ntohl(Seq))] = 0
+
         sock.sendto(ack_pkt, from_addr)
 
         # see if finished
@@ -156,8 +152,16 @@ def process_inbound_udp(sock):
     elif Type == 4:
         # received an ACK pkt
         ack_num = socket.ntohl(Ack)
-        if ack_num == ack_now:
-            dupACKcount += 1
+        ACK_dict[str(from_addr)+str(ack_num)] += 1
+        if ACK_dict[str(from_addr)+str(ack_num)] == 3: # 快速重传
+            left = ack_num * MAX_PAYLOAD
+            right = min((ack_num + 1) * MAX_PAYLOAD
+                        , CHUNK_DATA_SIZE)
+            retransmit_data = config.haschunks[ex_sending_chunkhash][left: right]
+            # send next data
+            data_header = struct.pack("HBBHHII", socket.htons(52305), 44, 3, socket.htons(HEADER_LEN),
+                                      socket.htons(HEADER_LEN + len(retransmit_data)), socket.htonl(ack_num + 1), 0)
+            sock.sendto(data_header + retransmit_data, from_addr)
         if (ack_num) * MAX_PAYLOAD >= CHUNK_DATA_SIZE:
             # finished
             print(f"finished sending {ex_sending_chunkhash}")
@@ -172,7 +176,7 @@ def process_inbound_udp(sock):
                                       socket.htons(HEADER_LEN + len(next_data)), socket.htonl(ack_num + 1), 0)
             sock.sendto(data_header + next_data, from_addr)
 
-            timer[str(ack_num + 1)] = [time.time(), from_addr, data_header + next_data] # 给data包一个定时器
+            timer[str(from_addr)+str(ack_num + 1)] = [time.time(), from_addr, data_header + next_data]  # 给data包一个定时器
 
 
 def process_user_input(sock):
