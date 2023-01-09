@@ -119,8 +119,7 @@ def process_inbound_udp(sock):
         ack_pkt = struct.pack("HBBHHII", socket.htons(52305), 44, 4, socket.htons(HEADER_LEN), socket.htons(HEADER_LEN),
                               0, Seq)
 
-        if ACK_dict.setdefault(str(from_addr)+str(socket.ntohl(Seq))) is None:
-            ACK_dict[str(from_addr)+str(socket.ntohl(Seq))] = 0
+        ACK_dict.setdefault(str(from_addr) + str(socket.ntohl(Seq)), 0)
 
         sock.sendto(ack_pkt, from_addr)
 
