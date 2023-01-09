@@ -109,11 +109,12 @@ def process_inbound_udp(sock):
         # send back DATA
         data_header = struct.pack("HBBHHII", socket.htons(52305), 44, 3, socket.htons(HEADER_LEN),
                                   socket.htons(HEADER_LEN), socket.htonl(1), 0)
+        timer[str(from_addr) + str(1)] = [time.time(), from_addr, data_header + chunk_data]  # 给data包一个定时器
         sock.sendto(data_header + chunk_data, from_addr)
     elif Type == 3:
         # received a DATA pkt
         ex_received_chunk[ex_downloading_chunkhash] += data
-        del timer[str(from_addr)+str(socket.ntohl(Seq))]
+
 
         # send back ACK
         ack_pkt = struct.pack("HBBHHII", socket.htons(52305), 44, 4, socket.htons(HEADER_LEN), socket.htons(HEADER_LEN),
@@ -151,8 +152,9 @@ def process_inbound_udp(sock):
     elif Type == 4:
         # received an ACK pkt
         ack_num = socket.ntohl(Ack)
-        ACK_dict[str(from_addr)+str(ack_num)] += 1
-        if ACK_dict[str(from_addr)+str(ack_num)] == 3: # 快速重传
+        del timer[str(from_addr) + str(ack_num)]
+        ACK_dict[str(from_addr) + str(ack_num)] += 1
+        if ACK_dict[str(from_addr) + str(ack_num)] == 3:  # 快速重传
             left = ack_num * MAX_PAYLOAD
             right = min((ack_num + 1) * MAX_PAYLOAD
                         , CHUNK_DATA_SIZE)
@@ -175,7 +177,7 @@ def process_inbound_udp(sock):
                                       socket.htons(HEADER_LEN + len(next_data)), socket.htonl(ack_num + 1), 0)
             sock.sendto(data_header + next_data, from_addr)
 
-            timer[str(from_addr)+str(ack_num + 1)] = [time.time(), from_addr, data_header + next_data]  # 给data包一个定时器
+            timer[str(from_addr) + str(ack_num + 1)] = [time.time(), from_addr, data_header + next_data]  # 给data包一个定时器
 
 
 def process_user_input(sock):
