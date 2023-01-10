@@ -1,7 +1,7 @@
 import sys
 import os
 import time
-
+import datetime
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import select
 import util.simsocket as simsocket
@@ -24,22 +24,27 @@ header_len = struct.calcsize("HBBHHIIIIB")
 config = None
 ex_output_file = None
 ex_received_chunk = dict()
+ex_received_chunk_seq = dict()
 ex_sending_chunkhash = dict()
-ex_downloading_chunkhash = ""
+ex_downloading_chunkhash = dict()
 MAX_PAYLOAD = 1024
 timer = dict()
 dupACKcount = dict()
 packages = dict()
 connections = dict()
 current_sending_seq = 1
-
+seq_max = 1
+peer_friends = 0
+received_chunk = dict()
 def process_download(sock, chunkfile, outputfile):
     '''
         if DOWNLOAD is used, the peer will keep getting files until it is done
         '''
     print('PROCESS GET SKELETON CODE CALLED.  Fill me in! I\'ve been doing! (', chunkfile, ',     ', outputfile, ')')
+    print(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     global ex_output_file
     global ex_received_chunk
+    global ex_received_chunk_seq
     global ex_downloading_chunkhash
 
     ex_output_file = outputfile
@@ -50,7 +55,7 @@ def process_download(sock, chunkfile, outputfile):
         for line in lines:
             index, datahash_str = line.strip().split(" ")
             ex_received_chunk[datahash_str] = bytes()
-            ex_downloading_chunkhash = datahash_str
+            # ex_downloading_chunkhash = datahash_str
 
             # hex_str to bytes
             datahash = bytes.fromhex(datahash_str)
@@ -78,6 +83,11 @@ def process_inbound_udp(sock):
     global timer
     global current_sending_seq
     global ex_sending_chunkhash
+    global ex_received_chunk_seq
+    global ex_downloading_chunkhash
+    global seq_max
+    global peer_friends
+    global received_chunk 
     pkt, from_addr = sock.recvfrom(BUF_SIZE)
     magic_raw, Team, Type, hlen_raw, plen_raw, Seq_raw, Ack_raw = struct.unpack("HBBHHII", pkt[:HEADER_LEN])
     data = pkt[HEADER_LEN:]
@@ -110,10 +120,15 @@ def process_inbound_udp(sock):
     elif Type == 1:
         # received an IHAVE pkt
         # see what chunk the sender has
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!one friend")
+        peer_friends += 1
+        print(peer_friends)
         whohas_chunk_hash = data[:socket.ntohs(plen_raw) - HEADER_LEN]
 
         for i in range(len(whohas_chunk_hash) // 20):
             get_chunk_hash = data[20 * i:20 * i + 20]
+            ex_downloading_chunkhash[from_addr] = bytes.hex(get_chunk_hash)
+            ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]] = dict()
 
             # send back GET pkt
             get_header = struct.pack("HBBHHII", socket.htons(52305), 44, 2, socket.htons(HEADER_LEN),
@@ -138,7 +153,10 @@ def process_inbound_udp(sock):
     elif Type == 3:
         # received a DATA pkt
         data = pkt[header_len:]
-        ex_received_chunk[ex_downloading_chunkhash] += data
+        ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]][socket.ntohl(Seq_raw)] = data
+        # print(socket.ntohl(Seq_raw))
+        seq_max = max(seq_max, socket.ntohl(Seq_raw))
+        ex_received_chunk[ex_downloading_chunkhash[from_addr]] += data
         """
                     这里是不是不能直接加，中间可能有丢包，考虑用一个字典存数据，key为seq，value为data，如果满了就dump
                 """
@@ -149,33 +167,45 @@ def process_inbound_udp(sock):
                               0, Seq_raw, cwnd, ssthresh, status)
 
         sock.sendto(ack_pkt, from_addr)
-
         # see if finished
-        if len(ex_received_chunk[ex_downloading_chunkhash]) == CHUNK_DATA_SIZE:
+        if len(ex_received_chunk[ex_downloading_chunkhash[from_addr]]) == CHUNK_DATA_SIZE:
             sock.add_log('receiver all')
+            peer_friends -= 1
+            print(ex_downloading_chunkhash[from_addr])
+            print('receiver all from one friend')
+            print(peer_friends)
+
+            
+            received_chunk[ex_downloading_chunkhash[from_addr]] = bytes()
+            for i in range(seq_max):
+                received_chunk[ex_downloading_chunkhash[from_addr]] += ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]][i+1]
+
             # finished downloading this chunkdata!
             # dump your received chunk to file in dict form using pickle
-            with open(ex_output_file, "wb") as wf:
-                pickle.dump(ex_received_chunk, wf)
+            if peer_friends == 0:
 
-            # add to this peer's haschunk:
-            config.haschunks[ex_downloading_chunkhash] = ex_received_chunk[ex_downloading_chunkhash]
+                with open(ex_output_file, "wb") as wf:
+                    pickle.dump(received_chunk, wf)
+                print(received_chunk.keys())
 
-            # you need to print "GOT" when finished downloading all chunks in a DOWNLOAD file
-            print(f"GOT {ex_output_file}")
+                # add to this peer's haschunk:
+                config.haschunks[ex_downloading_chunkhash[from_addr]] = received_chunk[ex_downloading_chunkhash[from_addr]]
 
-            # The following things are just for illustration, you do not need to print out in your design.
-            sha1 = hashlib.sha1()
-            sha1.update(ex_received_chunk[ex_downloading_chunkhash])
-            received_chunkhash_str = sha1.hexdigest()
-            print(f"Expected chunkhash: {ex_downloading_chunkhash}")
-            print(f"Received chunkhash: {received_chunkhash_str}")
-            success = ex_downloading_chunkhash == received_chunkhash_str
-            print(f"Successful received: {success}")
-            if success:
-                print("Congrats! You have completed the example!")
-            else:
-                print("Example fails. Please check the example files carefully.")
+                # you need to print "GOT" when finished downloading all chunks in a DOWNLOAD file
+                print(f"GOT {ex_output_file}")
+
+                # The following things are just for illustration, you do not need to print out in your design.
+                sha1 = hashlib.sha1()
+                sha1.update(ex_received_chunk[ex_downloading_chunkhash[from_addr]])
+                received_chunkhash_str = sha1.hexdigest()
+                print(f"Expected chunkhash: {ex_downloading_chunkhash[from_addr]}")
+                print(f"Received chunkhash: {received_chunkhash_str}")
+                success = ex_downloading_chunkhash[from_addr] == received_chunkhash_str
+                print(f"Successful received: {success}")
+                if success:
+                    print("Congrats! You have completed the example!")
+                else:
+                    print("Example fails. Please check the example files carefully.")
     elif Type == 4:
         # received an ACK pkt
         data = pkt[header_len:]
