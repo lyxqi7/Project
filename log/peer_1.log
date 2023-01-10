@@ -1,0 +1,9 @@
+GRADER: PeerProc {} createdPROCESS GET SKELETON CODE CALLED.  Fill me in! I've been doing! ( test/tmp2/download_target.chunkhash ,      test/tmp2/download_result.fragment )
+Traceback (most recent call last):
+  File "src/peer.py", line 237, in <module>
+    peer_run(config)
+  File "src/peer.py", line 207, in peer_run
+    process_user_input(sock)
+  File "src/peer.py", line 184, in process_user_input
+    command, chunkf, outf = input().split(' ')
+EOFError: EOF when reading a line
