@@ -1,5 +1,17 @@
-GRADER: PeerProc {} createdPROCESS GET SKELETON CODE CALLED.  Fill me in! I've been doing! ( test/tmp2/download_target.chunkhash ,      test/tmp2/download_result.fragment )
-GOT test/tmp2/download_result.fragment
+GRADER: PeerProc {} createdPROCESS GET SKELETON CODE CALLED.  Fill me in! I've been doing! ( test/tmp3/download_target3.chunkhash ,      test/tmp3/download_result.fragment )
+2023-01-10 17:42:29
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!one friend
+1
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!one friend
+2
+45acace8e984465459c893197e593c36daf653db
+receiver all from one friend
+1
+3b68110847941b84e8d05417a5b2609122a56314
+receiver all from one friend
+0
+dict_keys(['45acace8e984465459c893197e593c36daf653db', '3b68110847941b84e8d05417a5b2609122a56314'])
+GOT test/tmp3/download_result.fragment
 Expected chunkhash: 3b68110847941b84e8d05417a5b2609122a56314
 Received chunkhash: 3b68110847941b84e8d05417a5b2609122a56314
 Successful received: True
