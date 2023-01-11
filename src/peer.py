@@ -2,6 +2,7 @@ import sys
 import os
 import time
 import datetime
+
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import select
 import util.simsocket as simsocket
@@ -32,10 +33,52 @@ timer = dict()
 dupACKcount = dict()
 packages = dict()
 connections = dict()
-current_sending_seq = 1
+current_sending_seq = dict()
 seq_max = 1
 peer_friends = 0
 received_chunk = dict()
+chunk_peers = dict()
+check_peers_crush = dict()
+
+
+def change_peer(sock, from_addr):
+    new_addr = from_addr
+    sock.add_log(f'start change: old:{from_addr}')
+    for key, value in chunk_peers.items():
+        sock.add_log(f'1 key:{key}  value:{value}')
+        if value[0][value[1]] == from_addr:
+            sock.add_log(f'correct')
+            value[1] += 1
+            sock.add_log(f'key:{key}  value:{value}')
+            if len(value[0]) > value[1]:
+                sock.add_log('start')
+                chunk_peers[key] = value
+                new_addr = value[0][value[1]]
+                sock.add_log(f'new:{new_addr}')
+                del ex_downloading_chunkhash[from_addr]
+                sock.add_log('a')
+                ex_downloading_chunkhash[new_addr] = key
+                sock.add_log('b')
+                ex_received_chunk[key] = bytes()
+                sock.add_log('c')
+                ex_received_chunk_seq[key] = dict()
+                sock.add_log('d')
+                received_chunk[key] = bytes()
+                sock.add_log('j')
+                get_chunk_hash = bytes.fromhex(key)
+                sock.add_log('k')
+                del check_peers_crush[str(from_addr)]
+                sock.add_log('l')
+                get_header = struct.pack("HBBHHII", socket.htons(52305), 44, 2, socket.htons(HEADER_LEN),
+                                         socket.htons(HEADER_LEN + len(get_chunk_hash)), socket.htonl(0),
+                                         socket.htonl(0))
+                sock.add_log('m')
+                get_pkt = get_header + get_chunk_hash
+                sock.sendto(get_pkt, new_addr)
+                sock.add_log('n')
+                check_peers_crush[str(new_addr)] = [time.time(), new_addr]
+
+
 def process_download(sock, chunkfile, outputfile):
     '''
         if DOWNLOAD is used, the peer will keep getting files until it is done
@@ -59,6 +102,7 @@ def process_download(sock, chunkfile, outputfile):
 
             # hex_str to bytes
             datahash = bytes.fromhex(datahash_str)
+            chunk_peers[datahash_str] = []
             download_hash = download_hash + datahash
 
     # Step2: make WHOHAS pkt
@@ -81,13 +125,13 @@ def process_inbound_udp(sock):
     # Receive pkt
     global config
     global timer
-    global current_sending_seq
     global ex_sending_chunkhash
     global ex_received_chunk_seq
     global ex_downloading_chunkhash
     global seq_max
     global peer_friends
-    global received_chunk 
+    global received_chunk
+    global current_sending_seq
     pkt, from_addr = sock.recvfrom(BUF_SIZE)
     magic_raw, Team, Type, hlen_raw, plen_raw, Seq_raw, Ack_raw = struct.unpack("HBBHHII", pkt[:HEADER_LEN])
     data = pkt[HEADER_LEN:]
@@ -121,20 +165,29 @@ def process_inbound_udp(sock):
         # received an IHAVE pkt
         # see what chunk the sender has
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!one friend")
-        peer_friends += 1
-        print(peer_friends)
         whohas_chunk_hash = data[:socket.ntohs(plen_raw) - HEADER_LEN]
 
         for i in range(len(whohas_chunk_hash) // 20):
             get_chunk_hash = data[20 * i:20 * i + 20]
             ex_downloading_chunkhash[from_addr] = bytes.hex(get_chunk_hash)
             ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]] = dict()
+            if len(chunk_peers[bytes.hex(get_chunk_hash)]) == 0:
+                peer_friends += 1
+                print(peer_friends)
+                # send back GET pkt
+                get_header = struct.pack("HBBHHII", socket.htons(52305), 44, 2, socket.htons(HEADER_LEN),
+                                         socket.htons(HEADER_LEN + len(get_chunk_hash)), socket.htonl(0),
+                                         socket.htonl(0))
+                get_pkt = get_header + get_chunk_hash
+                sock.sendto(get_pkt, from_addr)
+                check_peers_crush[str(from_addr)] = [time.time(), from_addr]
+                chunk_peers[bytes.hex(get_chunk_hash)] = [[from_addr], 0]
+                sock.add_log(f'2 key:{bytes.hex(get_chunk_hash)}  value:{chunk_peers[bytes.hex(get_chunk_hash)]}')
+            else:
+                sock.add_log(f'3 key:{bytes.hex(get_chunk_hash)}  value:{chunk_peers[bytes.hex(get_chunk_hash)]}')
+                chunk_peers[bytes.hex(get_chunk_hash)][0].append(from_addr)
+                sock.add_log(f'4 key:{bytes.hex(get_chunk_hash)}  value:{chunk_peers[bytes.hex(get_chunk_hash)]}')
 
-            # send back GET pkt
-            get_header = struct.pack("HBBHHII", socket.htons(52305), 44, 2, socket.htons(HEADER_LEN),
-                                     socket.htons(HEADER_LEN + len(get_chunk_hash)), socket.htonl(0), socket.htonl(0))
-            get_pkt = get_header + get_chunk_hash
-            sock.sendto(get_pkt, from_addr)
     elif Type == 2:
         # received a GET pkt
         chunk_data = config.haschunks[bytes.hex(data[:20])][:MAX_PAYLOAD]
@@ -149,9 +202,10 @@ def process_inbound_udp(sock):
         packages[str(from_addr) + str(1)] = [from_addr, data_header + chunk_data]
         connections[str(from_addr)] = [1, 64, 0]
         sock.sendto(data_header + chunk_data, from_addr)
-        current_sending_seq += 1
+        current_sending_seq[str(from_addr)] = 2
     elif Type == 3:
         # received a DATA pkt
+        check_peers_crush[str(from_addr)] = [time.time(), from_addr]
         data = pkt[header_len:]
         ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]][socket.ntohl(Seq_raw)] = data
         # print(socket.ntohl(Seq_raw))
@@ -175,10 +229,10 @@ def process_inbound_udp(sock):
             print('receiver all from one friend')
             print(peer_friends)
 
-            
             received_chunk[ex_downloading_chunkhash[from_addr]] = bytes()
             for i in range(seq_max):
-                received_chunk[ex_downloading_chunkhash[from_addr]] += ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]][i+1]
+                received_chunk[ex_downloading_chunkhash[from_addr]] += \
+                    ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]][i + 1]
 
             # finished downloading this chunkdata!
             # dump your received chunk to file in dict form using pickle
@@ -189,7 +243,8 @@ def process_inbound_udp(sock):
                 print(received_chunk.keys())
 
                 # add to this peer's haschunk:
-                config.haschunks[ex_downloading_chunkhash[from_addr]] = received_chunk[ex_downloading_chunkhash[from_addr]]
+                config.haschunks[ex_downloading_chunkhash[from_addr]] = received_chunk[
+                    ex_downloading_chunkhash[from_addr]]
 
                 # you need to print "GOT" when finished downloading all chunks in a DOWNLOAD file
                 print(f"GOT {ex_output_file}")
@@ -222,7 +277,7 @@ def process_inbound_udp(sock):
         del timer[index]
         sock.add_log('e')
         sock.add_log(f'index:{index}  value:{dupACKcount[index]}')
-        dupACKcount[index] = dupACKcount[index]+1
+        dupACKcount[index] = dupACKcount[index] + 1
         sock.add_log('f')
         if dupACKcount[index] == 3:  # 触发快重传
             sock.add_log('g')
@@ -248,8 +303,8 @@ def process_inbound_udp(sock):
             status = connections[str(from_addr)][2]
             send_num = int(cwnd) - len(timer)
             sock.add_log(f'cwnd:{int(cwnd)}  timer:{len(timer)}  status:{status}  send_num:{send_num}')
-            left = (current_sending_seq-1) * MAX_PAYLOAD
-            right = min((current_sending_seq) * MAX_PAYLOAD
+            left = (current_sending_seq[str(from_addr)] - 1) * MAX_PAYLOAD
+            right = min((current_sending_seq[str(from_addr)]) * MAX_PAYLOAD
                         , CHUNK_DATA_SIZE)
             sock.add_log(f'before for')
             for i in range(send_num):
@@ -260,18 +315,22 @@ def process_inbound_udp(sock):
                 sock.add_log(f'send in for')
                 # send next data
                 data_header = struct.pack("HBBHHIIIIB", socket.htons(52305), 44, 3, socket.htons(HEADER_LEN),
-                                          socket.htons(HEADER_LEN + len(next_data)), socket.htonl(current_sending_seq), 0,
+                                          socket.htons(HEADER_LEN + len(next_data)),
+                                          socket.htonl(current_sending_seq[str(from_addr)]),
+                                          0,
                                           socket.htonl(cwnd), socket.htonl(ssthresh), status)
                 sock.sendto(data_header + next_data, from_addr)
                 sock.add_log(f'finish send')
 
-                timer[str(from_addr) + str(current_sending_seq)] = [time.time(), from_addr,
-                                                            data_header + next_data]  # 给data包一个定时器
-                dupACKcount[str(from_addr) + str(current_sending_seq)] = 0  # 给data包定一个ack触发器
-                packages[str(from_addr) + str(current_sending_seq)] = [from_addr, data_header + next_data]
-                current_sending_seq += 1
-                left = (current_sending_seq - 1) * MAX_PAYLOAD
-                right = (current_sending_seq) * MAX_PAYLOAD
+                timer[str(from_addr) + str(current_sending_seq[str(from_addr)])] = [time.time(), from_addr,
+                                                                                    data_header + next_data]  # 给data包一个定时器
+                dupACKcount[str(from_addr) + str(current_sending_seq[str(from_addr)])] = 0  # 给data包定一个ack触发器
+                packages[str(from_addr) + str(current_sending_seq[str(from_addr)])] = [from_addr,
+                                                                                       data_header + next_data]
+                current_sending_seq[str(from_addr)] += 1
+                left = (current_sending_seq[str(from_addr)] - 1) * MAX_PAYLOAD
+                right = (current_sending_seq[str(from_addr)]) * MAX_PAYLOAD
+
 
 def process_user_input(sock):
     command, chunkf, outf = input().split(' ')
@@ -290,7 +349,6 @@ def peer_run(config):
             ready = select.select([sock, sys.stdin], [], [], 0.1)
             read_ready = ready[0]
 
-
             if len(read_ready) > 0:
                 if sock in read_ready:
                     process_inbound_udp(sock)
@@ -301,6 +359,11 @@ def peer_run(config):
                 for i in timer.keys():  # 超时重传
                     if time.time() - timer[i][0] > 3:
                         sock.sendto(timer[i][2], timer[i][1])
+                for i in check_peers_crush.keys():
+                    if time.time() - check_peers_crush[i][0] > 5:
+                        change_peer(sock, check_peers_crush[i][1])
+                        sock.add_log('finish change')
+                        break
     except KeyboardInterrupt:
         pass
     finally:
