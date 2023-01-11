@@ -1,156 +1,156 @@
-2023-01-11 09:36:26,302 -+- PEER2_LOGGER -+- INFO -+- Start logging
-2023-01-11 09:36:26,302 -+- PEER2_LOGGER -+- INFO -+- Network simulator activated, running at ('127.0.0.1', 46025).
-2023-01-11 09:36:28,335 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type0 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack0, pkt_len36
-2023-01-11 09:36:28,335 -+- PEER2_LOGGER -+- INFO -+- timeout:3
-2023-01-11 09:36:28,336 -+- PEER2_LOGGER -+- DEBUG -+- sending a type1 pkt to ('127.0.0.1', 48001) via spiffy, seq0, ack0, pkt_len36
-2023-01-11 09:36:28,539 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type2 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack0, pkt_len36
-2023-01-11 09:36:28,539 -+- PEER2_LOGGER -+- INFO -+- timeout:3
-2023-01-11 09:36:28,540 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq1, ack0, pkt_len1049
-2023-01-11 09:36:28,745 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack1, pkt_len25
-2023-01-11 09:36:28,746 -+- PEER2_LOGGER -+- INFO -+- timeout:3
-2023-01-11 09:36:28,746 -+- PEER2_LOGGER -+- INFO -+- a
-2023-01-11 09:36:28,746 -+- PEER2_LOGGER -+- INFO -+- b
-2023-01-11 09:36:28,746 -+- PEER2_LOGGER -+- INFO -+- c
-2023-01-11 09:36:28,747 -+- PEER2_LOGGER -+- INFO -+- d
-2023-01-11 09:36:28,747 -+- PEER2_LOGGER -+- INFO -+- b cwnd:1  timer:1  status:0
-2023-01-11 09:36:28,747 -+- PEER2_LOGGER -+- INFO -+- e
-2023-01-11 09:36:28,748 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)1  value:0
-2023-01-11 09:36:28,748 -+- PEER2_LOGGER -+- INFO -+- f
-2023-01-11 09:36:28,748 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:1  timer:0  status:0
-2023-01-11 09:36:28,749 -+- PEER2_LOGGER -+- INFO -+- cwnd:2  timer:0  status:0  send_num:2
-2023-01-11 09:36:28,749 -+- PEER2_LOGGER -+- INFO -+- before for
-2023-01-11 09:36:28,749 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:28,750 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:28,750 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq2, ack0, pkt_len1040
-2023-01-11 09:36:28,750 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:28,750 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:28,751 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:28,751 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq3, ack0, pkt_len1040
-2023-01-11 09:36:28,751 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:28,955 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack2, pkt_len25
-2023-01-11 09:36:28,956 -+- PEER2_LOGGER -+- INFO -+- timeout:3
-2023-01-11 09:36:28,956 -+- PEER2_LOGGER -+- INFO -+- a
-2023-01-11 09:36:28,956 -+- PEER2_LOGGER -+- INFO -+- b
-2023-01-11 09:36:28,957 -+- PEER2_LOGGER -+- INFO -+- c
-2023-01-11 09:36:28,957 -+- PEER2_LOGGER -+- INFO -+- d
-2023-01-11 09:36:28,958 -+- PEER2_LOGGER -+- INFO -+- b cwnd:2  timer:2  status:0
-2023-01-11 09:36:28,958 -+- PEER2_LOGGER -+- INFO -+- e
-2023-01-11 09:36:28,958 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)2  value:0
-2023-01-11 09:36:28,959 -+- PEER2_LOGGER -+- INFO -+- f
-2023-01-11 09:36:28,959 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:2  timer:1  status:0
-2023-01-11 09:36:28,960 -+- PEER2_LOGGER -+- INFO -+- cwnd:3  timer:1  status:0  send_num:2
-2023-01-11 09:36:28,960 -+- PEER2_LOGGER -+- INFO -+- before for
-2023-01-11 09:36:28,960 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:28,961 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:28,961 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq4, ack0, pkt_len1040
-2023-01-11 09:36:28,962 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:28,962 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:28,962 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:28,963 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq5, ack0, pkt_len1040
-2023-01-11 09:36:28,963 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:28,964 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack3, pkt_len25
-2023-01-11 09:36:28,964 -+- PEER2_LOGGER -+- INFO -+- timeout:3
-2023-01-11 09:36:28,964 -+- PEER2_LOGGER -+- INFO -+- a
-2023-01-11 09:36:28,965 -+- PEER2_LOGGER -+- INFO -+- b
-2023-01-11 09:36:28,965 -+- PEER2_LOGGER -+- INFO -+- c
-2023-01-11 09:36:28,965 -+- PEER2_LOGGER -+- INFO -+- d
-2023-01-11 09:36:28,966 -+- PEER2_LOGGER -+- INFO -+- b cwnd:3  timer:3  status:0
-2023-01-11 09:36:28,966 -+- PEER2_LOGGER -+- INFO -+- e
-2023-01-11 09:36:28,966 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)3  value:0
-2023-01-11 09:36:28,967 -+- PEER2_LOGGER -+- INFO -+- f
-2023-01-11 09:36:28,967 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:3  timer:2  status:0
-2023-01-11 09:36:28,967 -+- PEER2_LOGGER -+- INFO -+- cwnd:4  timer:2  status:0  send_num:2
-2023-01-11 09:36:28,968 -+- PEER2_LOGGER -+- INFO -+- before for
-2023-01-11 09:36:28,968 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:28,968 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:28,968 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq6, ack0, pkt_len1040
-2023-01-11 09:36:28,969 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:28,969 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:28,969 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:28,970 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq7, ack0, pkt_len1040
-2023-01-11 09:36:28,970 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:29,167 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack4, pkt_len25
-2023-01-11 09:36:29,167 -+- PEER2_LOGGER -+- INFO -+- timeout:3
-2023-01-11 09:36:29,167 -+- PEER2_LOGGER -+- INFO -+- a
-2023-01-11 09:36:29,167 -+- PEER2_LOGGER -+- INFO -+- b
-2023-01-11 09:36:29,167 -+- PEER2_LOGGER -+- INFO -+- c
-2023-01-11 09:36:29,167 -+- PEER2_LOGGER -+- INFO -+- d
-2023-01-11 09:36:29,168 -+- PEER2_LOGGER -+- INFO -+- b cwnd:4  timer:4  status:0
-2023-01-11 09:36:29,168 -+- PEER2_LOGGER -+- INFO -+- e
-2023-01-11 09:36:29,168 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)4  value:0
-2023-01-11 09:36:29,168 -+- PEER2_LOGGER -+- INFO -+- f
-2023-01-11 09:36:29,168 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:4  timer:3  status:0
-2023-01-11 09:36:29,168 -+- PEER2_LOGGER -+- INFO -+- cwnd:5  timer:3  status:0  send_num:2
-2023-01-11 09:36:29,168 -+- PEER2_LOGGER -+- INFO -+- before for
-2023-01-11 09:36:29,168 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:29,169 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:29,169 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq8, ack0, pkt_len1040
-2023-01-11 09:36:29,169 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:29,169 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:29,169 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:29,169 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq9, ack0, pkt_len1040
-2023-01-11 09:36:29,169 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:29,171 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack5, pkt_len25
-2023-01-11 09:36:29,171 -+- PEER2_LOGGER -+- INFO -+- timeout:3
-2023-01-11 09:36:29,171 -+- PEER2_LOGGER -+- INFO -+- a
-2023-01-11 09:36:29,171 -+- PEER2_LOGGER -+- INFO -+- b
-2023-01-11 09:36:29,172 -+- PEER2_LOGGER -+- INFO -+- c
-2023-01-11 09:36:29,172 -+- PEER2_LOGGER -+- INFO -+- d
-2023-01-11 09:36:29,172 -+- PEER2_LOGGER -+- INFO -+- b cwnd:5  timer:5  status:0
-2023-01-11 09:36:29,172 -+- PEER2_LOGGER -+- INFO -+- e
-2023-01-11 09:36:29,172 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)5  value:0
-2023-01-11 09:36:29,172 -+- PEER2_LOGGER -+- INFO -+- f
-2023-01-11 09:36:29,172 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:5  timer:4  status:0
-2023-01-11 09:36:29,172 -+- PEER2_LOGGER -+- INFO -+- cwnd:6  timer:4  status:0  send_num:2
-2023-01-11 09:36:29,172 -+- PEER2_LOGGER -+- INFO -+- before for
-2023-01-11 09:36:29,173 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:29,173 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:29,173 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq10, ack0, pkt_len1040
-2023-01-11 09:36:29,173 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:29,174 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:29,174 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:29,174 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq11, ack0, pkt_len1040
-2023-01-11 09:36:29,175 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:29,179 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack6, pkt_len25
-2023-01-11 09:36:29,180 -+- PEER2_LOGGER -+- INFO -+- timeout:3
-2023-01-11 09:36:29,180 -+- PEER2_LOGGER -+- INFO -+- a
-2023-01-11 09:36:29,181 -+- PEER2_LOGGER -+- INFO -+- b
-2023-01-11 09:36:29,181 -+- PEER2_LOGGER -+- INFO -+- c
-2023-01-11 09:36:29,181 -+- PEER2_LOGGER -+- INFO -+- d
-2023-01-11 09:36:29,182 -+- PEER2_LOGGER -+- INFO -+- b cwnd:6  timer:6  status:0
-2023-01-11 09:36:29,182 -+- PEER2_LOGGER -+- INFO -+- e
-2023-01-11 09:36:29,182 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)6  value:0
-2023-01-11 09:36:29,182 -+- PEER2_LOGGER -+- INFO -+- f
-2023-01-11 09:36:29,183 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:6  timer:5  status:0
-2023-01-11 09:36:29,183 -+- PEER2_LOGGER -+- INFO -+- cwnd:7  timer:5  status:0  send_num:2
-2023-01-11 09:36:29,183 -+- PEER2_LOGGER -+- INFO -+- before for
-2023-01-11 09:36:29,184 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:29,184 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:29,185 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq12, ack0, pkt_len1040
-2023-01-11 09:36:29,185 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:29,185 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:29,186 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:29,186 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq13, ack0, pkt_len1040
-2023-01-11 09:36:29,186 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:29,187 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack7, pkt_len25
-2023-01-11 09:36:29,187 -+- PEER2_LOGGER -+- INFO -+- timeout:3
-2023-01-11 09:36:29,187 -+- PEER2_LOGGER -+- INFO -+- a
-2023-01-11 09:36:29,187 -+- PEER2_LOGGER -+- INFO -+- b
-2023-01-11 09:36:29,187 -+- PEER2_LOGGER -+- INFO -+- c
-2023-01-11 09:36:29,187 -+- PEER2_LOGGER -+- INFO -+- d
-2023-01-11 09:36:29,187 -+- PEER2_LOGGER -+- INFO -+- b cwnd:7  timer:7  status:0
-2023-01-11 09:36:29,187 -+- PEER2_LOGGER -+- INFO -+- e
-2023-01-11 09:36:29,188 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)7  value:0
-2023-01-11 09:36:29,188 -+- PEER2_LOGGER -+- INFO -+- f
-2023-01-11 09:36:29,188 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:7  timer:6  status:0
-2023-01-11 09:36:29,188 -+- PEER2_LOGGER -+- INFO -+- cwnd:8  timer:6  status:0  send_num:2
-2023-01-11 09:36:29,188 -+- PEER2_LOGGER -+- INFO -+- before for
-2023-01-11 09:36:29,188 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:29,188 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:29,188 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq14, ack0, pkt_len1040
-2023-01-11 09:36:29,188 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:29,189 -+- PEER2_LOGGER -+- INFO -+- start for
-2023-01-11 09:36:29,189 -+- PEER2_LOGGER -+- INFO -+- send in for
-2023-01-11 09:36:29,189 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq15, ack0, pkt_len1040
-2023-01-11 09:36:29,189 -+- PEER2_LOGGER -+- INFO -+- finish send
-2023-01-11 09:36:29,234 -+- PEER2_LOGGER -+- INFO -+- socket closed
+2023-01-11 12:46:27,046 -+- PEER2_LOGGER -+- INFO -+- Start logging
+2023-01-11 12:46:27,046 -+- PEER2_LOGGER -+- INFO -+- Network simulator activated, running at ('127.0.0.1', 45115).
+2023-01-11 12:46:29,079 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type0 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack0, pkt_len36
+2023-01-11 12:46:29,079 -+- PEER2_LOGGER -+- INFO -+- timeout:3
+2023-01-11 12:46:29,079 -+- PEER2_LOGGER -+- DEBUG -+- sending a type1 pkt to ('127.0.0.1', 48001) via spiffy, seq0, ack0, pkt_len36
+2023-01-11 12:46:29,283 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type2 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack0, pkt_len36
+2023-01-11 12:46:29,283 -+- PEER2_LOGGER -+- INFO -+- timeout:3
+2023-01-11 12:46:29,283 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq1, ack0, pkt_len1049
+2023-01-11 12:46:29,488 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack1, pkt_len25
+2023-01-11 12:46:29,488 -+- PEER2_LOGGER -+- INFO -+- timeout:3
+2023-01-11 12:46:29,489 -+- PEER2_LOGGER -+- INFO -+- a
+2023-01-11 12:46:29,489 -+- PEER2_LOGGER -+- INFO -+- b
+2023-01-11 12:46:29,489 -+- PEER2_LOGGER -+- INFO -+- c
+2023-01-11 12:46:29,489 -+- PEER2_LOGGER -+- INFO -+- d
+2023-01-11 12:46:29,489 -+- PEER2_LOGGER -+- INFO -+- b cwnd:1  timer:1  status:0
+2023-01-11 12:46:29,489 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)1  value:0
+2023-01-11 12:46:29,490 -+- PEER2_LOGGER -+- INFO -+- f
+2023-01-11 12:46:29,490 -+- PEER2_LOGGER -+- INFO -+- 1
+2023-01-11 12:46:29,490 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:1  timer:1  status:0
+2023-01-11 12:46:29,490 -+- PEER2_LOGGER -+- INFO -+- cwnd:2  timer:0  status:0  send_num:2
+2023-01-11 12:46:29,490 -+- PEER2_LOGGER -+- INFO -+- before for
+2023-01-11 12:46:29,490 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,491 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,491 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq2, ack0, pkt_len1040
+2023-01-11 12:46:29,491 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,491 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,491 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,491 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq3, ack0, pkt_len1040
+2023-01-11 12:46:29,492 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,696 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack2, pkt_len25
+2023-01-11 12:46:29,696 -+- PEER2_LOGGER -+- INFO -+- timeout:3
+2023-01-11 12:46:29,696 -+- PEER2_LOGGER -+- INFO -+- a
+2023-01-11 12:46:29,697 -+- PEER2_LOGGER -+- INFO -+- b
+2023-01-11 12:46:29,697 -+- PEER2_LOGGER -+- INFO -+- c
+2023-01-11 12:46:29,697 -+- PEER2_LOGGER -+- INFO -+- d
+2023-01-11 12:46:29,697 -+- PEER2_LOGGER -+- INFO -+- b cwnd:2  timer:2  status:0
+2023-01-11 12:46:29,697 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)2  value:0
+2023-01-11 12:46:29,697 -+- PEER2_LOGGER -+- INFO -+- f
+2023-01-11 12:46:29,698 -+- PEER2_LOGGER -+- INFO -+- 1
+2023-01-11 12:46:29,698 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:2  timer:2  status:0
+2023-01-11 12:46:29,698 -+- PEER2_LOGGER -+- INFO -+- cwnd:3  timer:1  status:0  send_num:2
+2023-01-11 12:46:29,698 -+- PEER2_LOGGER -+- INFO -+- before for
+2023-01-11 12:46:29,698 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,698 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,699 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq4, ack0, pkt_len1040
+2023-01-11 12:46:29,699 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,699 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,699 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,699 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq5, ack0, pkt_len1040
+2023-01-11 12:46:29,699 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,700 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack3, pkt_len25
+2023-01-11 12:46:29,700 -+- PEER2_LOGGER -+- INFO -+- timeout:3
+2023-01-11 12:46:29,700 -+- PEER2_LOGGER -+- INFO -+- a
+2023-01-11 12:46:29,700 -+- PEER2_LOGGER -+- INFO -+- b
+2023-01-11 12:46:29,700 -+- PEER2_LOGGER -+- INFO -+- c
+2023-01-11 12:46:29,700 -+- PEER2_LOGGER -+- INFO -+- d
+2023-01-11 12:46:29,701 -+- PEER2_LOGGER -+- INFO -+- b cwnd:3  timer:3  status:0
+2023-01-11 12:46:29,701 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)3  value:0
+2023-01-11 12:46:29,701 -+- PEER2_LOGGER -+- INFO -+- f
+2023-01-11 12:46:29,701 -+- PEER2_LOGGER -+- INFO -+- 1
+2023-01-11 12:46:29,701 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:3  timer:3  status:0
+2023-01-11 12:46:29,701 -+- PEER2_LOGGER -+- INFO -+- cwnd:4  timer:2  status:0  send_num:2
+2023-01-11 12:46:29,702 -+- PEER2_LOGGER -+- INFO -+- before for
+2023-01-11 12:46:29,702 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,702 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,702 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq6, ack0, pkt_len1040
+2023-01-11 12:46:29,702 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,703 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,703 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,703 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq7, ack0, pkt_len1040
+2023-01-11 12:46:29,703 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,904 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack4, pkt_len25
+2023-01-11 12:46:29,904 -+- PEER2_LOGGER -+- INFO -+- timeout:3
+2023-01-11 12:46:29,904 -+- PEER2_LOGGER -+- INFO -+- a
+2023-01-11 12:46:29,905 -+- PEER2_LOGGER -+- INFO -+- b
+2023-01-11 12:46:29,905 -+- PEER2_LOGGER -+- INFO -+- c
+2023-01-11 12:46:29,905 -+- PEER2_LOGGER -+- INFO -+- d
+2023-01-11 12:46:29,905 -+- PEER2_LOGGER -+- INFO -+- b cwnd:4  timer:4  status:0
+2023-01-11 12:46:29,905 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)4  value:0
+2023-01-11 12:46:29,905 -+- PEER2_LOGGER -+- INFO -+- f
+2023-01-11 12:46:29,906 -+- PEER2_LOGGER -+- INFO -+- 1
+2023-01-11 12:46:29,906 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:4  timer:4  status:0
+2023-01-11 12:46:29,906 -+- PEER2_LOGGER -+- INFO -+- cwnd:5  timer:3  status:0  send_num:2
+2023-01-11 12:46:29,906 -+- PEER2_LOGGER -+- INFO -+- before for
+2023-01-11 12:46:29,906 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,906 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,907 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq8, ack0, pkt_len1040
+2023-01-11 12:46:29,907 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,907 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,907 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,907 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq9, ack0, pkt_len1040
+2023-01-11 12:46:29,907 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,908 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack5, pkt_len25
+2023-01-11 12:46:29,908 -+- PEER2_LOGGER -+- INFO -+- timeout:3
+2023-01-11 12:46:29,908 -+- PEER2_LOGGER -+- INFO -+- a
+2023-01-11 12:46:29,908 -+- PEER2_LOGGER -+- INFO -+- b
+2023-01-11 12:46:29,908 -+- PEER2_LOGGER -+- INFO -+- c
+2023-01-11 12:46:29,909 -+- PEER2_LOGGER -+- INFO -+- d
+2023-01-11 12:46:29,909 -+- PEER2_LOGGER -+- INFO -+- b cwnd:5  timer:5  status:0
+2023-01-11 12:46:29,909 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)5  value:0
+2023-01-11 12:46:29,909 -+- PEER2_LOGGER -+- INFO -+- f
+2023-01-11 12:46:29,909 -+- PEER2_LOGGER -+- INFO -+- 1
+2023-01-11 12:46:29,909 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:5  timer:5  status:0
+2023-01-11 12:46:29,910 -+- PEER2_LOGGER -+- INFO -+- cwnd:6  timer:4  status:0  send_num:2
+2023-01-11 12:46:29,910 -+- PEER2_LOGGER -+- INFO -+- before for
+2023-01-11 12:46:29,910 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,910 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,910 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq10, ack0, pkt_len1040
+2023-01-11 12:46:29,910 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,910 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,910 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,910 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq11, ack0, pkt_len1040
+2023-01-11 12:46:29,911 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,913 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack6, pkt_len25
+2023-01-11 12:46:29,913 -+- PEER2_LOGGER -+- INFO -+- timeout:3
+2023-01-11 12:46:29,913 -+- PEER2_LOGGER -+- INFO -+- a
+2023-01-11 12:46:29,913 -+- PEER2_LOGGER -+- INFO -+- b
+2023-01-11 12:46:29,914 -+- PEER2_LOGGER -+- INFO -+- c
+2023-01-11 12:46:29,914 -+- PEER2_LOGGER -+- INFO -+- d
+2023-01-11 12:46:29,914 -+- PEER2_LOGGER -+- INFO -+- b cwnd:6  timer:6  status:0
+2023-01-11 12:46:29,914 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)6  value:0
+2023-01-11 12:46:29,914 -+- PEER2_LOGGER -+- INFO -+- f
+2023-01-11 12:46:29,914 -+- PEER2_LOGGER -+- INFO -+- 1
+2023-01-11 12:46:29,914 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:6  timer:6  status:0
+2023-01-11 12:46:29,914 -+- PEER2_LOGGER -+- INFO -+- cwnd:7  timer:5  status:0  send_num:2
+2023-01-11 12:46:29,914 -+- PEER2_LOGGER -+- INFO -+- before for
+2023-01-11 12:46:29,915 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,915 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,915 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq12, ack0, pkt_len1040
+2023-01-11 12:46:29,915 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,915 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,915 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,915 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq13, ack0, pkt_len1040
+2023-01-11 12:46:29,915 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,917 -+- PEER2_LOGGER -+- DEBUG -+- Receiving a type4 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack7, pkt_len25
+2023-01-11 12:46:29,917 -+- PEER2_LOGGER -+- INFO -+- timeout:3
+2023-01-11 12:46:29,917 -+- PEER2_LOGGER -+- INFO -+- a
+2023-01-11 12:46:29,917 -+- PEER2_LOGGER -+- INFO -+- b
+2023-01-11 12:46:29,917 -+- PEER2_LOGGER -+- INFO -+- c
+2023-01-11 12:46:29,917 -+- PEER2_LOGGER -+- INFO -+- d
+2023-01-11 12:46:29,917 -+- PEER2_LOGGER -+- INFO -+- b cwnd:7  timer:7  status:0
+2023-01-11 12:46:29,917 -+- PEER2_LOGGER -+- INFO -+- index:('127.0.0.1', 48001)7  value:0
+2023-01-11 12:46:29,918 -+- PEER2_LOGGER -+- INFO -+- f
+2023-01-11 12:46:29,918 -+- PEER2_LOGGER -+- INFO -+- 1
+2023-01-11 12:46:29,918 -+- PEER2_LOGGER -+- INFO -+- bb cwnd:7  timer:7  status:0
+2023-01-11 12:46:29,918 -+- PEER2_LOGGER -+- INFO -+- cwnd:8  timer:6  status:0  send_num:2
+2023-01-11 12:46:29,918 -+- PEER2_LOGGER -+- INFO -+- before for
+2023-01-11 12:46:29,918 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,918 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,918 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq14, ack0, pkt_len1040
+2023-01-11 12:46:29,919 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,919 -+- PEER2_LOGGER -+- INFO -+- start for
+2023-01-11 12:46:29,919 -+- PEER2_LOGGER -+- INFO -+- send in for
+2023-01-11 12:46:29,919 -+- PEER2_LOGGER -+- DEBUG -+- sending a type3 pkt to ('127.0.0.1', 48001) via spiffy, seq15, ack0, pkt_len1040
+2023-01-11 12:46:29,919 -+- PEER2_LOGGER -+- INFO -+- finish send
+2023-01-11 12:46:29,977 -+- PEER2_LOGGER -+- INFO -+- socket closed
