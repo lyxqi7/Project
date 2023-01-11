@@ -38,7 +38,7 @@ seq_max = 1
 peer_friends = 0
 received_chunk = dict()
 chunk_peers = dict()
-check_peers_crush = dict()
+check_peers_crash = dict()
 
 
 def change_peer(sock, from_addr):
@@ -67,7 +67,7 @@ def change_peer(sock, from_addr):
                 sock.add_log('j')
                 get_chunk_hash = bytes.fromhex(key)
                 sock.add_log('k')
-                del check_peers_crush[str(from_addr)]
+                del check_peers_crash[str(from_addr)]
                 sock.add_log('l')
                 get_header = struct.pack("HBBHHII", socket.htons(52305), 44, 2, socket.htons(HEADER_LEN),
                                          socket.htons(HEADER_LEN + len(get_chunk_hash)), socket.htonl(0),
@@ -76,7 +76,7 @@ def change_peer(sock, from_addr):
                 get_pkt = get_header + get_chunk_hash
                 sock.sendto(get_pkt, new_addr)
                 sock.add_log('n')
-                check_peers_crush[str(new_addr)] = [time.time(), new_addr]
+                check_peers_crash[str(new_addr)] = [time.time(), new_addr]
 
 
 def process_download(sock, chunkfile, outputfile):
@@ -180,7 +180,7 @@ def process_inbound_udp(sock):
                                          socket.htonl(0))
                 get_pkt = get_header + get_chunk_hash
                 sock.sendto(get_pkt, from_addr)
-                check_peers_crush[str(from_addr)] = [time.time(), from_addr]
+                check_peers_crash[str(from_addr)] = [time.time(), from_addr]
                 chunk_peers[bytes.hex(get_chunk_hash)] = [[from_addr], 0]
                 sock.add_log(f'2 key:{bytes.hex(get_chunk_hash)}  value:{chunk_peers[bytes.hex(get_chunk_hash)]}')
             else:
@@ -205,7 +205,7 @@ def process_inbound_udp(sock):
         current_sending_seq[str(from_addr)] = 2
     elif Type == 3:
         # received a DATA pkt
-        check_peers_crush[str(from_addr)] = [time.time(), from_addr]
+        check_peers_crash[str(from_addr)] = [time.time(), from_addr]
         data = pkt[header_len:]
         ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]][socket.ntohl(Seq_raw)] = data
         # print(socket.ntohl(Seq_raw))
@@ -359,10 +359,9 @@ def peer_run(config):
                 for i in timer.keys():  # 超时重传
                     if time.time() - timer[i][0] > 3:
                         sock.sendto(timer[i][2], timer[i][1])
-                for i in check_peers_crush.keys():
-                    if time.time() - check_peers_crush[i][0] > 5:
-                        change_peer(sock, check_peers_crush[i][1])
-                        sock.add_log('finish change')
+                for i in check_peers_crash.keys():
+                    if time.time() - check_peers_crash[i][0] > 5:
+                        change_peer(sock, check_peers_crash[i][1])
                         break
     except KeyboardInterrupt:
         pass
