@@ -2,7 +2,7 @@ import sys
 import os
 import time
 import datetime
-
+from matplotlib import pyplot as plt
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import select
 import util.simsocket as simsocket
@@ -40,7 +40,8 @@ peer_friends = 0
 received_chunk = dict()
 chunk_peers = dict()
 check_peers_crash = dict()
-
+cwnd_time = []
+cwnd_starttime = time.time()
 
 def change_peer(sock, from_addr):
     new_addr = from_addr
@@ -92,6 +93,8 @@ def process_download(sock, chunkfile, outputfile):
     global ex_received_chunk
     global ex_received_chunk_seq
     global ex_downloading_chunkhash
+    global cwnd_time
+    global cwnd_starttime
 
     ex_output_file = outputfile
     # Step 1: read chunkhash to be downloaded from chunkfile
@@ -277,6 +280,7 @@ def process_inbound_udp(sock):
         ack_num = socket.ntohl(Ack_raw)
         sock.add_log('a')
         cwnd = int(connections[str(from_addr)][0])
+        cwnd_time.append([time.time() - cwnd_starttime, cwnd])
         sock.add_log('b')
         ssthresh = connections[str(from_addr)][1]
         sock.add_log('c')
@@ -298,6 +302,13 @@ def process_inbound_udp(sock):
             connections[str(from_addr)][2] = 0
         if (ack_num) * MAX_PAYLOAD >= CHUNK_DATA_SIZE:
             sock.add_log('sender all')
+            plt.figure()
+            plt.plot([i[0] for i in cwnd_time], [i[1] for i in cwnd_time], markersize=0.1)
+            plt.xlabel("Time(s)")
+            plt.ylabel("Window size")
+            plt.title("Sending Window Size")
+            plt.savefig("Window_Size.png")
+            plt.show()
             # finished
             print(f"finished sending {ex_sending_chunkhash}")
             pass
@@ -317,6 +328,7 @@ def process_inbound_udp(sock):
                 else:
                     connections[str(from_addr)][0] += 1 / cwnd
                 cwnd = int(connections[str(from_addr)][0])
+                cwnd_time.append([time.time() - cwnd_starttime, cwnd])
                 ssthresh = connections[str(from_addr)][1]
                 status = connections[str(from_addr)][2]
                 send_num = int(cwnd) - len(timer)
