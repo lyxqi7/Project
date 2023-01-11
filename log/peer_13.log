@@ -1,0 +1,17 @@
+GRADER: PeerProc {} createdPROCESS GET SKELETON CODE CALLED.  Fill me in! I've been doing! ( test/tmp5/targets/target4.chunkhash ,      test/tmp5/results/result4.fragment )
+2023-01-11 13:15:06
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!one friend
+1
+whohas: , has: ['4055c5c46cd3bd3b37759f1b8e8c46de7e307fe6', '45121c739a3815b01ea6a817b0aa59a94ef2cdd3', '7d9de0eff08dca52e90cab8f5cddfa8cb9550406', '2f6b0fff14fb6d04b1472d6cd10c909d0af7885a']
+whohas: , has: ['4055c5c46cd3bd3b37759f1b8e8c46de7e307fe6', '45121c739a3815b01ea6a817b0aa59a94ef2cdd3', '7d9de0eff08dca52e90cab8f5cddfa8cb9550406', '2f6b0fff14fb6d04b1472d6cd10c909d0af7885a']
+whohas: , has: ['4055c5c46cd3bd3b37759f1b8e8c46de7e307fe6', '45121c739a3815b01ea6a817b0aa59a94ef2cdd3', '7d9de0eff08dca52e90cab8f5cddfa8cb9550406', '2f6b0fff14fb6d04b1472d6cd10c909d0af7885a']
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!one friend
+2
+Traceback (most recent call last):
+  File "src/peer.py", line 423, in <module>
+    peer_run(config)
+  File "src/peer.py", line 395, in peer_run
+    change_peer(sock, check_peers_crash[i][1])
+  File "src/peer.py", line 51, in change_peer
+    if value[0][value[1]] == from_addr:
+IndexError: list index out of range

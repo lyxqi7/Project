@@ -1,0 +1,1039 @@
+2023-01-11 13:15:05,902 -+- PEER13_LOGGER -+- INFO -+- Start logging
+2023-01-11 13:15:05,902 -+- PEER13_LOGGER -+- INFO -+- Network simulator activated, running at ('127.0.0.1', 34405).
+2023-01-11 13:15:06,460 -+- PEER13_LOGGER -+- DEBUG -+- sending a type0 pkt to ('127.0.0.1', 48001) via spiffy, seq0, ack0, pkt_len56
+2023-01-11 13:15:06,460 -+- PEER13_LOGGER -+- DEBUG -+- sending a type0 pkt to ('127.0.0.1', 48002) via spiffy, seq0, ack0, pkt_len56
+2023-01-11 13:15:06,461 -+- PEER13_LOGGER -+- DEBUG -+- sending a type0 pkt to ('127.0.0.1', 48003) via spiffy, seq0, ack0, pkt_len56
+2023-01-11 13:15:06,461 -+- PEER13_LOGGER -+- DEBUG -+- sending a type0 pkt to ('127.0.0.1', 48004) via spiffy, seq0, ack0, pkt_len56
+2023-01-11 13:15:06,462 -+- PEER13_LOGGER -+- DEBUG -+- sending a type0 pkt to ('127.0.0.1', 48005) via spiffy, seq0, ack0, pkt_len56
+2023-01-11 13:15:06,463 -+- PEER13_LOGGER -+- DEBUG -+- sending a type0 pkt to ('127.0.0.1', 48006) via spiffy, seq0, ack0, pkt_len56
+2023-01-11 13:15:06,463 -+- PEER13_LOGGER -+- DEBUG -+- sending a type0 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack0, pkt_len56
+2023-01-11 13:15:06,667 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type1 pkt from ('127.0.0.1', 48007) via spiffy, seq0, ack0, pkt_len36
+2023-01-11 13:15:06,668 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:06,668 -+- PEER13_LOGGER -+- DEBUG -+- sending a type2 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack0, pkt_len36
+2023-01-11 13:15:06,668 -+- PEER13_LOGGER -+- INFO -+- 2 key:ffcbf7387375ae06a87336744f6bf7f9d6e8f905  value:[[('127.0.0.1', 48007)], 0]
+2023-01-11 13:15:06,879 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq1, ack0, pkt_len1049
+2023-01-11 13:15:06,879 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:06,879 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack1, pkt_len25
+2023-01-11 13:15:07,092 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq2, ack0, pkt_len1040
+2023-01-11 13:15:07,092 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,092 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack2, pkt_len25
+2023-01-11 13:15:07,101 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq3, ack0, pkt_len1040
+2023-01-11 13:15:07,101 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,101 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack3, pkt_len25
+2023-01-11 13:15:07,304 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq4, ack0, pkt_len1040
+2023-01-11 13:15:07,305 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,305 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack4, pkt_len25
+2023-01-11 13:15:07,313 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq5, ack0, pkt_len1040
+2023-01-11 13:15:07,314 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,314 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack5, pkt_len25
+2023-01-11 13:15:07,331 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq6, ack0, pkt_len1040
+2023-01-11 13:15:07,331 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,331 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack6, pkt_len25
+2023-01-11 13:15:07,340 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq7, ack0, pkt_len1040
+2023-01-11 13:15:07,340 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,341 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack7, pkt_len25
+2023-01-11 13:15:07,364 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type0 pkt from ('127.0.0.1', 48005) via spiffy, seq0, ack0, pkt_len36
+2023-01-11 13:15:07,364 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,462 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type0 pkt from ('127.0.0.1', 48001) via spiffy, seq0, ack0, pkt_len36
+2023-01-11 13:15:07,463 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,517 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq8, ack0, pkt_len1040
+2023-01-11 13:15:07,517 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,518 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack8, pkt_len25
+2023-01-11 13:15:07,526 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq9, ack0, pkt_len1040
+2023-01-11 13:15:07,526 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,527 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack9, pkt_len25
+2023-01-11 13:15:07,544 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq10, ack0, pkt_len1040
+2023-01-11 13:15:07,544 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,544 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack10, pkt_len25
+2023-01-11 13:15:07,553 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq11, ack0, pkt_len1040
+2023-01-11 13:15:07,553 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,553 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack11, pkt_len25
+2023-01-11 13:15:07,569 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type0 pkt from ('127.0.0.1', 48003) via spiffy, seq0, ack0, pkt_len56
+2023-01-11 13:15:07,569 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,579 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq12, ack0, pkt_len1040
+2023-01-11 13:15:07,579 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,579 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack12, pkt_len25
+2023-01-11 13:15:07,588 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq13, ack0, pkt_len1040
+2023-01-11 13:15:07,588 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,588 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack13, pkt_len25
+2023-01-11 13:15:07,605 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq14, ack0, pkt_len1040
+2023-01-11 13:15:07,605 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,605 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack14, pkt_len25
+2023-01-11 13:15:07,614 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq15, ack0, pkt_len1040
+2023-01-11 13:15:07,614 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,614 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack15, pkt_len25
+2023-01-11 13:15:07,730 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq16, ack0, pkt_len1040
+2023-01-11 13:15:07,730 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,730 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack16, pkt_len25
+2023-01-11 13:15:07,739 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq17, ack0, pkt_len1040
+2023-01-11 13:15:07,739 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,739 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack17, pkt_len25
+2023-01-11 13:15:07,756 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq18, ack0, pkt_len1040
+2023-01-11 13:15:07,757 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,757 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack18, pkt_len25
+2023-01-11 13:15:07,766 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq19, ack0, pkt_len1040
+2023-01-11 13:15:07,766 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,766 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack19, pkt_len25
+2023-01-11 13:15:07,791 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq20, ack0, pkt_len1040
+2023-01-11 13:15:07,791 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,791 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack20, pkt_len25
+2023-01-11 13:15:07,800 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq21, ack0, pkt_len1040
+2023-01-11 13:15:07,800 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,800 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack21, pkt_len25
+2023-01-11 13:15:07,817 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq22, ack0, pkt_len1040
+2023-01-11 13:15:07,818 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,818 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack22, pkt_len25
+2023-01-11 13:15:07,826 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq23, ack0, pkt_len1040
+2023-01-11 13:15:07,827 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,827 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack23, pkt_len25
+2023-01-11 13:15:07,861 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq24, ack0, pkt_len1040
+2023-01-11 13:15:07,861 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,861 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack24, pkt_len25
+2023-01-11 13:15:07,870 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq25, ack0, pkt_len1040
+2023-01-11 13:15:07,870 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,871 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack25, pkt_len25
+2023-01-11 13:15:07,886 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq26, ack0, pkt_len1040
+2023-01-11 13:15:07,886 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,886 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack26, pkt_len25
+2023-01-11 13:15:07,895 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq27, ack0, pkt_len1040
+2023-01-11 13:15:07,895 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,895 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack27, pkt_len25
+2023-01-11 13:15:07,922 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq28, ack0, pkt_len1040
+2023-01-11 13:15:07,923 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,923 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack28, pkt_len25
+2023-01-11 13:15:07,931 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq29, ack0, pkt_len1040
+2023-01-11 13:15:07,931 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,931 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack29, pkt_len25
+2023-01-11 13:15:07,948 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq30, ack0, pkt_len1040
+2023-01-11 13:15:07,948 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:07,949 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,002 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq32, ack0, pkt_len1040
+2023-01-11 13:15:08,002 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,002 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,011 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq33, ack0, pkt_len1040
+2023-01-11 13:15:08,011 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,012 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,029 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq34, ack0, pkt_len1040
+2023-01-11 13:15:08,029 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,029 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,038 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq35, ack0, pkt_len1040
+2023-01-11 13:15:08,038 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,038 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,064 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq36, ack0, pkt_len1040
+2023-01-11 13:15:08,064 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,064 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,064 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq37, ack0, pkt_len1040
+2023-01-11 13:15:08,064 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,064 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,073 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq38, ack0, pkt_len1040
+2023-01-11 13:15:08,073 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,074 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,082 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq39, ack0, pkt_len1040
+2023-01-11 13:15:08,082 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,082 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,098 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq40, ack0, pkt_len1040
+2023-01-11 13:15:08,098 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,098 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,108 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq41, ack0, pkt_len1040
+2023-01-11 13:15:08,108 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,108 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,124 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq42, ack0, pkt_len1040
+2023-01-11 13:15:08,125 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,125 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,133 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq43, ack0, pkt_len1040
+2023-01-11 13:15:08,134 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,134 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,152 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq44, ack0, pkt_len1040
+2023-01-11 13:15:08,152 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,152 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,161 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq46, ack0, pkt_len1040
+2023-01-11 13:15:08,161 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,161 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,195 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq48, ack0, pkt_len1040
+2023-01-11 13:15:08,196 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,196 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,248 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq56, ack0, pkt_len1040
+2023-01-11 13:15:08,248 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,249 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,249 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq57, ack0, pkt_len1040
+2023-01-11 13:15:08,249 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,249 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,265 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq58, ack0, pkt_len1040
+2023-01-11 13:15:08,265 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,265 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,276 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type1 pkt from ('127.0.0.1', 48004) via spiffy, seq0, ack0, pkt_len36
+2023-01-11 13:15:08,276 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,276 -+- PEER13_LOGGER -+- DEBUG -+- sending a type2 pkt to ('127.0.0.1', 48004) via spiffy, seq0, ack0, pkt_len36
+2023-01-11 13:15:08,277 -+- PEER13_LOGGER -+- INFO -+- 2 key:8492d9ebfa75967906856426ecaf8f6fee35680d  value:[[('127.0.0.1', 48004)], 0]
+2023-01-11 13:15:08,283 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq60, ack0, pkt_len1040
+2023-01-11 13:15:08,284 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,284 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack30, pkt_len25
+2023-01-11 13:15:08,302 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq31, ack0, pkt_len1040
+2023-01-11 13:15:08,302 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:08,303 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack44, pkt_len25
+2023-01-11 13:15:10,151 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48004) via spiffy, seq1, ack0, pkt_len1049
+2023-01-11 13:15:10,151 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:10,152 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48004) via spiffy, seq0, ack1, pkt_len25
+2023-01-11 13:15:11,038 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq45, ack0, pkt_len1040
+2023-01-11 13:15:11,038 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,038 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack46, pkt_len25
+2023-01-11 13:15:11,147 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq45, ack0, pkt_len1040
+2023-01-11 13:15:11,147 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,148 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack46, pkt_len25
+2023-01-11 13:15:11,158 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq46, ack0, pkt_len1040
+2023-01-11 13:15:11,158 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,158 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack46, pkt_len25
+2023-01-11 13:15:11,167 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq47, ack0, pkt_len1040
+2023-01-11 13:15:11,167 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,167 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack48, pkt_len25
+2023-01-11 13:15:11,176 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq48, ack0, pkt_len1040
+2023-01-11 13:15:11,176 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,177 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack48, pkt_len25
+2023-01-11 13:15:11,186 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq49, ack0, pkt_len1040
+2023-01-11 13:15:11,186 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,186 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack49, pkt_len25
+2023-01-11 13:15:11,195 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq50, ack0, pkt_len1040
+2023-01-11 13:15:11,195 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,196 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack50, pkt_len25
+2023-01-11 13:15:11,204 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq51, ack0, pkt_len1040
+2023-01-11 13:15:11,204 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,204 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack51, pkt_len25
+2023-01-11 13:15:11,213 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq52, ack0, pkt_len1040
+2023-01-11 13:15:11,213 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,213 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack52, pkt_len25
+2023-01-11 13:15:11,222 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq53, ack0, pkt_len1040
+2023-01-11 13:15:11,223 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,223 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack53, pkt_len25
+2023-01-11 13:15:11,232 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq54, ack0, pkt_len1040
+2023-01-11 13:15:11,232 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,232 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack54, pkt_len25
+2023-01-11 13:15:11,233 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq55, ack0, pkt_len1040
+2023-01-11 13:15:11,234 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,234 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,241 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq56, ack0, pkt_len1040
+2023-01-11 13:15:11,242 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,242 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,251 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq57, ack0, pkt_len1040
+2023-01-11 13:15:11,251 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,251 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,353 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq45, ack0, pkt_len1040
+2023-01-11 13:15:11,353 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,353 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,362 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq46, ack0, pkt_len1040
+2023-01-11 13:15:11,362 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,362 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,379 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq47, ack0, pkt_len1040
+2023-01-11 13:15:11,379 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,379 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,388 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq48, ack0, pkt_len1040
+2023-01-11 13:15:11,389 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,389 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,397 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq49, ack0, pkt_len1040
+2023-01-11 13:15:11,398 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,398 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,408 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq50, ack0, pkt_len1040
+2023-01-11 13:15:11,408 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,408 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,417 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq51, ack0, pkt_len1040
+2023-01-11 13:15:11,417 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,417 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,427 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq52, ack0, pkt_len1040
+2023-01-11 13:15:11,427 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,427 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,429 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq53, ack0, pkt_len1040
+2023-01-11 13:15:11,430 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,430 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,439 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq54, ack0, pkt_len1040
+2023-01-11 13:15:11,439 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,439 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,449 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq55, ack0, pkt_len1040
+2023-01-11 13:15:11,449 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,449 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,458 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq56, ack0, pkt_len1040
+2023-01-11 13:15:11,458 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,458 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,467 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq57, ack0, pkt_len1040
+2023-01-11 13:15:11,467 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,467 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,476 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq58, ack0, pkt_len1040
+2023-01-11 13:15:11,476 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,476 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack58, pkt_len25
+2023-01-11 13:15:11,485 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq59, ack0, pkt_len1040
+2023-01-11 13:15:11,486 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,486 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack60, pkt_len25
+2023-01-11 13:15:11,584 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq59, ack0, pkt_len1040
+2023-01-11 13:15:11,584 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,584 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack60, pkt_len25
+2023-01-11 13:15:11,897 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq61, ack0, pkt_len1040
+2023-01-11 13:15:11,898 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:11,898 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack61, pkt_len25
+2023-01-11 13:15:12,006 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq61, ack0, pkt_len1040
+2023-01-11 13:15:12,006 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,007 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack61, pkt_len25
+2023-01-11 13:15:12,107 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq61, ack0, pkt_len1040
+2023-01-11 13:15:12,107 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,107 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack61, pkt_len25
+2023-01-11 13:15:12,128 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq63, ack0, pkt_len1040
+2023-01-11 13:15:12,128 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,129 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack61, pkt_len25
+2023-01-11 13:15:12,137 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq64, ack0, pkt_len1040
+2023-01-11 13:15:12,138 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,138 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack61, pkt_len25
+2023-01-11 13:15:12,321 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq62, ack0, pkt_len1040
+2023-01-11 13:15:12,321 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,321 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack64, pkt_len25
+2023-01-11 13:15:12,534 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq65, ack0, pkt_len1040
+2023-01-11 13:15:12,534 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,534 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack65, pkt_len25
+2023-01-11 13:15:12,543 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq66, ack0, pkt_len1040
+2023-01-11 13:15:12,543 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,544 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack66, pkt_len25
+2023-01-11 13:15:12,748 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq67, ack0, pkt_len1040
+2023-01-11 13:15:12,748 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,748 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack67, pkt_len25
+2023-01-11 13:15:12,757 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq68, ack0, pkt_len1040
+2023-01-11 13:15:12,757 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,757 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack68, pkt_len25
+2023-01-11 13:15:12,774 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq69, ack0, pkt_len1040
+2023-01-11 13:15:12,774 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,774 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack69, pkt_len25
+2023-01-11 13:15:12,962 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq70, ack0, pkt_len1040
+2023-01-11 13:15:12,962 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,962 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack70, pkt_len25
+2023-01-11 13:15:12,980 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq71, ack0, pkt_len1040
+2023-01-11 13:15:12,980 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,980 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack71, pkt_len25
+2023-01-11 13:15:12,989 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq72, ack0, pkt_len1040
+2023-01-11 13:15:12,990 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:12,990 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack72, pkt_len25
+2023-01-11 13:15:13,024 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq73, ack0, pkt_len1040
+2023-01-11 13:15:13,024 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,024 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack73, pkt_len25
+2023-01-11 13:15:13,175 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq74, ack0, pkt_len1040
+2023-01-11 13:15:13,175 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,176 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack74, pkt_len25
+2023-01-11 13:15:13,205 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq75, ack0, pkt_len1040
+2023-01-11 13:15:13,205 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,206 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack75, pkt_len25
+2023-01-11 13:15:13,221 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq76, ack0, pkt_len1040
+2023-01-11 13:15:13,222 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,222 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack76, pkt_len25
+2023-01-11 13:15:13,230 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq77, ack0, pkt_len1040
+2023-01-11 13:15:13,230 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,231 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack77, pkt_len25
+2023-01-11 13:15:13,273 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq78, ack0, pkt_len1040
+2023-01-11 13:15:13,273 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,273 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack78, pkt_len25
+2023-01-11 13:15:13,389 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq79, ack0, pkt_len1040
+2023-01-11 13:15:13,389 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,389 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack79, pkt_len25
+2023-01-11 13:15:13,428 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq80, ack0, pkt_len1040
+2023-01-11 13:15:13,428 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,428 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack80, pkt_len25
+2023-01-11 13:15:13,453 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq81, ack0, pkt_len1040
+2023-01-11 13:15:13,453 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,453 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack81, pkt_len25
+2023-01-11 13:15:13,470 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq82, ack0, pkt_len1040
+2023-01-11 13:15:13,470 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,470 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack82, pkt_len25
+2023-01-11 13:15:13,479 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq83, ack0, pkt_len1040
+2023-01-11 13:15:13,479 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,480 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack83, pkt_len25
+2023-01-11 13:15:13,530 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq84, ack0, pkt_len1040
+2023-01-11 13:15:13,530 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,530 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack84, pkt_len25
+2023-01-11 13:15:13,612 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq85, ack0, pkt_len1040
+2023-01-11 13:15:13,612 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,612 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack85, pkt_len25
+2023-01-11 13:15:13,650 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq86, ack0, pkt_len1040
+2023-01-11 13:15:13,651 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,651 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack86, pkt_len25
+2023-01-11 13:15:13,684 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq87, ack0, pkt_len1040
+2023-01-11 13:15:13,684 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,684 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack87, pkt_len25
+2023-01-11 13:15:13,710 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq88, ack0, pkt_len1040
+2023-01-11 13:15:13,710 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,710 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack88, pkt_len25
+2023-01-11 13:15:13,728 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq89, ack0, pkt_len1040
+2023-01-11 13:15:13,728 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,728 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack89, pkt_len25
+2023-01-11 13:15:13,737 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq90, ack0, pkt_len1040
+2023-01-11 13:15:13,737 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,737 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack90, pkt_len25
+2023-01-11 13:15:13,787 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq91, ack0, pkt_len1040
+2023-01-11 13:15:13,787 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,787 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack91, pkt_len25
+2023-01-11 13:15:13,851 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq92, ack0, pkt_len1040
+2023-01-11 13:15:13,851 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,851 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack92, pkt_len25
+2023-01-11 13:15:13,881 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq93, ack0, pkt_len1040
+2023-01-11 13:15:13,881 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,881 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack93, pkt_len25
+2023-01-11 13:15:13,914 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq94, ack0, pkt_len1040
+2023-01-11 13:15:13,915 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,915 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack94, pkt_len25
+2023-01-11 13:15:13,952 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq95, ack0, pkt_len1040
+2023-01-11 13:15:13,952 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,952 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack95, pkt_len25
+2023-01-11 13:15:13,976 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq96, ack0, pkt_len1040
+2023-01-11 13:15:13,976 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,977 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack96, pkt_len25
+2023-01-11 13:15:13,994 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq97, ack0, pkt_len1040
+2023-01-11 13:15:13,995 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:13,995 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack97, pkt_len25
+2023-01-11 13:15:14,004 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq98, ack0, pkt_len1040
+2023-01-11 13:15:14,004 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,004 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack98, pkt_len25
+2023-01-11 13:15:14,044 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq99, ack0, pkt_len1040
+2023-01-11 13:15:14,044 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,044 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack99, pkt_len25
+2023-01-11 13:15:14,099 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq100, ack0, pkt_len1040
+2023-01-11 13:15:14,099 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,099 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack100, pkt_len25
+2023-01-11 13:15:14,129 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq101, ack0, pkt_len1040
+2023-01-11 13:15:14,129 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,129 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack101, pkt_len25
+2023-01-11 13:15:14,154 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq102, ack0, pkt_len1040
+2023-01-11 13:15:14,154 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,155 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack102, pkt_len25
+2023-01-11 13:15:14,192 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq103, ack0, pkt_len1040
+2023-01-11 13:15:14,192 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,192 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack103, pkt_len25
+2023-01-11 13:15:14,225 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq104, ack0, pkt_len1040
+2023-01-11 13:15:14,225 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,226 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack104, pkt_len25
+2023-01-11 13:15:14,243 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq105, ack0, pkt_len1040
+2023-01-11 13:15:14,243 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,243 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack105, pkt_len25
+2023-01-11 13:15:14,261 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq106, ack0, pkt_len1040
+2023-01-11 13:15:14,261 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,261 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack106, pkt_len25
+2023-01-11 13:15:14,270 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq107, ack0, pkt_len1040
+2023-01-11 13:15:14,270 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,270 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack107, pkt_len25
+2023-01-11 13:15:14,310 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq108, ack0, pkt_len1040
+2023-01-11 13:15:14,310 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,310 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack108, pkt_len25
+2023-01-11 13:15:14,355 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq109, ack0, pkt_len1040
+2023-01-11 13:15:14,355 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,355 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack109, pkt_len25
+2023-01-11 13:15:14,392 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq110, ack0, pkt_len1040
+2023-01-11 13:15:14,392 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,392 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack110, pkt_len25
+2023-01-11 13:15:14,411 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq111, ack0, pkt_len1040
+2023-01-11 13:15:14,411 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,411 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack111, pkt_len25
+2023-01-11 13:15:14,440 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq112, ack0, pkt_len1040
+2023-01-11 13:15:14,440 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,440 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack112, pkt_len25
+2023-01-11 13:15:14,474 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq113, ack0, pkt_len1040
+2023-01-11 13:15:14,474 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,474 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack113, pkt_len25
+2023-01-11 13:15:14,500 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq114, ack0, pkt_len1040
+2023-01-11 13:15:14,500 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,500 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack114, pkt_len25
+2023-01-11 13:15:14,517 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq115, ack0, pkt_len1040
+2023-01-11 13:15:14,518 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,518 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack115, pkt_len25
+2023-01-11 13:15:14,535 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq116, ack0, pkt_len1040
+2023-01-11 13:15:14,535 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,536 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack116, pkt_len25
+2023-01-11 13:15:14,544 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq117, ack0, pkt_len1040
+2023-01-11 13:15:14,545 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,545 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack117, pkt_len25
+2023-01-11 13:15:14,575 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq118, ack0, pkt_len1040
+2023-01-11 13:15:14,576 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,576 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack118, pkt_len25
+2023-01-11 13:15:14,620 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq119, ack0, pkt_len1040
+2023-01-11 13:15:14,620 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,620 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack119, pkt_len25
+2023-01-11 13:15:14,657 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq120, ack0, pkt_len1040
+2023-01-11 13:15:14,658 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,658 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack120, pkt_len25
+2023-01-11 13:15:14,676 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq121, ack0, pkt_len1040
+2023-01-11 13:15:14,676 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,677 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack121, pkt_len25
+2023-01-11 13:15:14,689 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq122, ack0, pkt_len1040
+2023-01-11 13:15:14,689 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,689 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack122, pkt_len25
+2023-01-11 13:15:14,722 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq123, ack0, pkt_len1040
+2023-01-11 13:15:14,722 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,722 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack123, pkt_len25
+2023-01-11 13:15:14,757 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq124, ack0, pkt_len1040
+2023-01-11 13:15:14,757 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,757 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack124, pkt_len25
+2023-01-11 13:15:14,775 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq125, ack0, pkt_len1040
+2023-01-11 13:15:14,775 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,775 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack125, pkt_len25
+2023-01-11 13:15:14,801 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq126, ack0, pkt_len1040
+2023-01-11 13:15:14,801 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,802 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack126, pkt_len25
+2023-01-11 13:15:14,819 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq127, ack0, pkt_len1040
+2023-01-11 13:15:14,819 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,819 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack127, pkt_len25
+2023-01-11 13:15:14,841 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq128, ack0, pkt_len1040
+2023-01-11 13:15:14,841 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,841 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack128, pkt_len25
+2023-01-11 13:15:14,850 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq129, ack0, pkt_len1040
+2023-01-11 13:15:14,850 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,851 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack129, pkt_len25
+2023-01-11 13:15:14,885 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq130, ack0, pkt_len1040
+2023-01-11 13:15:14,886 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,886 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack130, pkt_len25
+2023-01-11 13:15:14,923 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq131, ack0, pkt_len1040
+2023-01-11 13:15:14,923 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,923 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack131, pkt_len25
+2023-01-11 13:15:14,942 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq132, ack0, pkt_len1040
+2023-01-11 13:15:14,942 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,942 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack132, pkt_len25
+2023-01-11 13:15:14,963 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq133, ack0, pkt_len1040
+2023-01-11 13:15:14,963 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,963 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack133, pkt_len25
+2023-01-11 13:15:14,987 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq134, ack0, pkt_len1040
+2023-01-11 13:15:14,988 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:14,988 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack134, pkt_len25
+2023-01-11 13:15:15,014 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq135, ack0, pkt_len1040
+2023-01-11 13:15:15,014 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,014 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack135, pkt_len25
+2023-01-11 13:15:15,040 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq136, ack0, pkt_len1040
+2023-01-11 13:15:15,041 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,041 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack136, pkt_len25
+2023-01-11 13:15:15,067 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq137, ack0, pkt_len1040
+2023-01-11 13:15:15,067 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,067 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack137, pkt_len25
+2023-01-11 13:15:15,085 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq138, ack0, pkt_len1040
+2023-01-11 13:15:15,085 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,085 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack138, pkt_len25
+2023-01-11 13:15:15,107 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq139, ack0, pkt_len1040
+2023-01-11 13:15:15,107 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,108 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack139, pkt_len25
+2023-01-11 13:15:15,116 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq140, ack0, pkt_len1040
+2023-01-11 13:15:15,116 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,116 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack140, pkt_len25
+2023-01-11 13:15:15,133 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq141, ack0, pkt_len1040
+2023-01-11 13:15:15,133 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,134 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack141, pkt_len25
+2023-01-11 13:15:15,160 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq142, ack0, pkt_len1040
+2023-01-11 13:15:15,160 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,160 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack142, pkt_len25
+2023-01-11 13:15:15,197 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq143, ack0, pkt_len1040
+2023-01-11 13:15:15,197 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,197 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack143, pkt_len25
+2023-01-11 13:15:15,216 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq144, ack0, pkt_len1040
+2023-01-11 13:15:15,216 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,216 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack144, pkt_len25
+2023-01-11 13:15:15,237 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq145, ack0, pkt_len1040
+2023-01-11 13:15:15,237 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,237 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack145, pkt_len25
+2023-01-11 13:15:15,263 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq146, ack0, pkt_len1040
+2023-01-11 13:15:15,263 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,263 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack146, pkt_len25
+2023-01-11 13:15:15,281 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq147, ack0, pkt_len1040
+2023-01-11 13:15:15,281 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,281 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack147, pkt_len25
+2023-01-11 13:15:15,307 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq148, ack0, pkt_len1040
+2023-01-11 13:15:15,307 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,307 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack148, pkt_len25
+2023-01-11 13:15:15,332 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq149, ack0, pkt_len1040
+2023-01-11 13:15:15,332 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,332 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack149, pkt_len25
+2023-01-11 13:15:15,359 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq150, ack0, pkt_len1040
+2023-01-11 13:15:15,359 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,359 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack150, pkt_len25
+2023-01-11 13:15:15,381 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq151, ack0, pkt_len1040
+2023-01-11 13:15:15,382 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,382 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack151, pkt_len25
+2023-01-11 13:15:15,391 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq152, ack0, pkt_len1040
+2023-01-11 13:15:15,391 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,391 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack152, pkt_len25
+2023-01-11 13:15:15,400 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq153, ack0, pkt_len1040
+2023-01-11 13:15:15,401 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,401 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack153, pkt_len25
+2023-01-11 13:15:15,417 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq154, ack0, pkt_len1040
+2023-01-11 13:15:15,417 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,417 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack154, pkt_len25
+2023-01-11 13:15:15,443 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq155, ack0, pkt_len1040
+2023-01-11 13:15:15,443 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,443 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack155, pkt_len25
+2023-01-11 13:15:15,479 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq156, ack0, pkt_len1040
+2023-01-11 13:15:15,480 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,480 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack156, pkt_len25
+2023-01-11 13:15:15,499 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq157, ack0, pkt_len1040
+2023-01-11 13:15:15,499 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,499 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack157, pkt_len25
+2023-01-11 13:15:15,519 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq158, ack0, pkt_len1040
+2023-01-11 13:15:15,519 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,519 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack158, pkt_len25
+2023-01-11 13:15:15,545 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq159, ack0, pkt_len1040
+2023-01-11 13:15:15,545 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,546 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack159, pkt_len25
+2023-01-11 13:15:15,564 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq160, ack0, pkt_len1040
+2023-01-11 13:15:15,564 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,564 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack160, pkt_len25
+2023-01-11 13:15:15,581 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq161, ack0, pkt_len1040
+2023-01-11 13:15:15,581 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,582 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack161, pkt_len25
+2023-01-11 13:15:15,607 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq162, ack0, pkt_len1040
+2023-01-11 13:15:15,608 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,608 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack162, pkt_len25
+2023-01-11 13:15:15,633 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq163, ack0, pkt_len1040
+2023-01-11 13:15:15,633 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,633 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack163, pkt_len25
+2023-01-11 13:15:15,656 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq164, ack0, pkt_len1040
+2023-01-11 13:15:15,656 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,656 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack164, pkt_len25
+2023-01-11 13:15:15,673 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq165, ack0, pkt_len1040
+2023-01-11 13:15:15,674 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,674 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack165, pkt_len25
+2023-01-11 13:15:15,684 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq166, ack0, pkt_len1040
+2023-01-11 13:15:15,684 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,684 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack166, pkt_len25
+2023-01-11 13:15:15,693 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq167, ack0, pkt_len1040
+2023-01-11 13:15:15,693 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,693 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack167, pkt_len25
+2023-01-11 13:15:15,708 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq168, ack0, pkt_len1040
+2023-01-11 13:15:15,708 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,709 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack168, pkt_len25
+2023-01-11 13:15:15,735 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq169, ack0, pkt_len1040
+2023-01-11 13:15:15,735 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,735 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack169, pkt_len25
+2023-01-11 13:15:15,762 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq170, ack0, pkt_len1040
+2023-01-11 13:15:15,762 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,762 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack170, pkt_len25
+2023-01-11 13:15:15,790 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq171, ack0, pkt_len1040
+2023-01-11 13:15:15,790 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,790 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack171, pkt_len25
+2023-01-11 13:15:15,810 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq172, ack0, pkt_len1040
+2023-01-11 13:15:15,810 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,810 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack172, pkt_len25
+2023-01-11 13:15:15,836 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq173, ack0, pkt_len1040
+2023-01-11 13:15:15,837 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,837 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack173, pkt_len25
+2023-01-11 13:15:15,855 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq174, ack0, pkt_len1040
+2023-01-11 13:15:15,855 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,855 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack174, pkt_len25
+2023-01-11 13:15:15,863 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq175, ack0, pkt_len1040
+2023-01-11 13:15:15,864 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,864 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack175, pkt_len25
+2023-01-11 13:15:15,880 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq176, ack0, pkt_len1040
+2023-01-11 13:15:15,881 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,881 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack176, pkt_len25
+2023-01-11 13:15:15,907 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq177, ack0, pkt_len1040
+2023-01-11 13:15:15,907 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,907 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack177, pkt_len25
+2023-01-11 13:15:15,939 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq178, ack0, pkt_len1040
+2023-01-11 13:15:15,939 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,939 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack178, pkt_len25
+2023-01-11 13:15:15,955 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq179, ack0, pkt_len1040
+2023-01-11 13:15:15,956 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,956 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack179, pkt_len25
+2023-01-11 13:15:15,975 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq180, ack0, pkt_len1040
+2023-01-11 13:15:15,975 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,975 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack180, pkt_len25
+2023-01-11 13:15:15,984 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq181, ack0, pkt_len1040
+2023-01-11 13:15:15,984 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,984 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack181, pkt_len25
+2023-01-11 13:15:15,993 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq182, ack0, pkt_len1040
+2023-01-11 13:15:15,993 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:15,993 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack182, pkt_len25
+2023-01-11 13:15:16,008 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq183, ack0, pkt_len1040
+2023-01-11 13:15:16,008 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,008 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack183, pkt_len25
+2023-01-11 13:15:16,034 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq184, ack0, pkt_len1040
+2023-01-11 13:15:16,034 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,035 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack184, pkt_len25
+2023-01-11 13:15:16,053 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq185, ack0, pkt_len1040
+2023-01-11 13:15:16,053 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,053 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack185, pkt_len25
+2023-01-11 13:15:16,081 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq186, ack0, pkt_len1040
+2023-01-11 13:15:16,081 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,081 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack186, pkt_len25
+2023-01-11 13:15:16,101 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq187, ack0, pkt_len1040
+2023-01-11 13:15:16,101 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,102 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack187, pkt_len25
+2023-01-11 13:15:16,128 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq188, ack0, pkt_len1040
+2023-01-11 13:15:16,128 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,128 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack188, pkt_len25
+2023-01-11 13:15:16,153 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq189, ack0, pkt_len1040
+2023-01-11 13:15:16,153 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,153 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack189, pkt_len25
+2023-01-11 13:15:16,163 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq190, ack0, pkt_len1040
+2023-01-11 13:15:16,163 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,163 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack190, pkt_len25
+2023-01-11 13:15:16,172 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq191, ack0, pkt_len1040
+2023-01-11 13:15:16,172 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,173 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack191, pkt_len25
+2023-01-11 13:15:16,189 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq192, ack0, pkt_len1040
+2023-01-11 13:15:16,189 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,189 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack192, pkt_len25
+2023-01-11 13:15:16,221 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq193, ack0, pkt_len1040
+2023-01-11 13:15:16,222 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,222 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack193, pkt_len25
+2023-01-11 13:15:16,254 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq194, ack0, pkt_len1040
+2023-01-11 13:15:16,255 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,255 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack194, pkt_len25
+2023-01-11 13:15:16,266 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq195, ack0, pkt_len1040
+2023-01-11 13:15:16,266 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,266 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack195, pkt_len25
+2023-01-11 13:15:16,275 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq196, ack0, pkt_len1040
+2023-01-11 13:15:16,275 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,275 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack196, pkt_len25
+2023-01-11 13:15:16,293 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq197, ack0, pkt_len1040
+2023-01-11 13:15:16,293 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,293 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack197, pkt_len25
+2023-01-11 13:15:16,302 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq198, ack0, pkt_len1040
+2023-01-11 13:15:16,302 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,302 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack198, pkt_len25
+2023-01-11 13:15:16,317 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq199, ack0, pkt_len1040
+2023-01-11 13:15:16,317 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,317 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack199, pkt_len25
+2023-01-11 13:15:16,343 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq200, ack0, pkt_len1040
+2023-01-11 13:15:16,343 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,343 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack200, pkt_len25
+2023-01-11 13:15:16,362 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq201, ack0, pkt_len1040
+2023-01-11 13:15:16,362 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,362 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack201, pkt_len25
+2023-01-11 13:15:16,381 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq202, ack0, pkt_len1040
+2023-01-11 13:15:16,381 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,381 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack202, pkt_len25
+2023-01-11 13:15:16,401 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq203, ack0, pkt_len1040
+2023-01-11 13:15:16,401 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,401 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack203, pkt_len25
+2023-01-11 13:15:16,429 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq204, ack0, pkt_len1040
+2023-01-11 13:15:16,429 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,429 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack204, pkt_len25
+2023-01-11 13:15:16,452 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq205, ack0, pkt_len1040
+2023-01-11 13:15:16,452 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,452 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack205, pkt_len25
+2023-01-11 13:15:16,469 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq206, ack0, pkt_len1040
+2023-01-11 13:15:16,469 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,469 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack206, pkt_len25
+2023-01-11 13:15:16,474 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq207, ack0, pkt_len1040
+2023-01-11 13:15:16,474 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,474 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack207, pkt_len25
+2023-01-11 13:15:16,489 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq208, ack0, pkt_len1040
+2023-01-11 13:15:16,489 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,489 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack208, pkt_len25
+2023-01-11 13:15:16,513 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq209, ack0, pkt_len1040
+2023-01-11 13:15:16,513 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,513 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack209, pkt_len25
+2023-01-11 13:15:16,546 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq210, ack0, pkt_len1040
+2023-01-11 13:15:16,546 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,546 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack210, pkt_len25
+2023-01-11 13:15:16,557 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq211, ack0, pkt_len1040
+2023-01-11 13:15:16,557 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,557 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack211, pkt_len25
+2023-01-11 13:15:16,577 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq212, ack0, pkt_len1040
+2023-01-11 13:15:16,577 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,577 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack212, pkt_len25
+2023-01-11 13:15:16,592 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq213, ack0, pkt_len1040
+2023-01-11 13:15:16,592 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,592 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack213, pkt_len25
+2023-01-11 13:15:16,602 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq214, ack0, pkt_len1040
+2023-01-11 13:15:16,602 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,602 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack214, pkt_len25
+2023-01-11 13:15:16,611 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq215, ack0, pkt_len1040
+2023-01-11 13:15:16,611 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,611 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack215, pkt_len25
+2023-01-11 13:15:16,634 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq216, ack0, pkt_len1040
+2023-01-11 13:15:16,634 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,634 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack216, pkt_len25
+2023-01-11 13:15:16,661 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq217, ack0, pkt_len1040
+2023-01-11 13:15:16,661 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,661 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack217, pkt_len25
+2023-01-11 13:15:16,679 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq218, ack0, pkt_len1040
+2023-01-11 13:15:16,679 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,679 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack218, pkt_len25
+2023-01-11 13:15:16,696 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq219, ack0, pkt_len1040
+2023-01-11 13:15:16,696 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,696 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack219, pkt_len25
+2023-01-11 13:15:16,708 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq220, ack0, pkt_len1040
+2023-01-11 13:15:16,708 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,708 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack220, pkt_len25
+2023-01-11 13:15:16,737 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq221, ack0, pkt_len1040
+2023-01-11 13:15:16,737 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,737 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack221, pkt_len25
+2023-01-11 13:15:16,759 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq222, ack0, pkt_len1040
+2023-01-11 13:15:16,760 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,760 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack222, pkt_len25
+2023-01-11 13:15:16,776 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq223, ack0, pkt_len1040
+2023-01-11 13:15:16,776 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,776 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack223, pkt_len25
+2023-01-11 13:15:16,781 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq224, ack0, pkt_len1040
+2023-01-11 13:15:16,781 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,782 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack224, pkt_len25
+2023-01-11 13:15:16,798 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq225, ack0, pkt_len1040
+2023-01-11 13:15:16,798 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,798 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack225, pkt_len25
+2023-01-11 13:15:16,812 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq226, ack0, pkt_len1040
+2023-01-11 13:15:16,812 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,812 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack226, pkt_len25
+2023-01-11 13:15:16,845 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq227, ack0, pkt_len1040
+2023-01-11 13:15:16,845 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,845 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack227, pkt_len25
+2023-01-11 13:15:16,857 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq228, ack0, pkt_len1040
+2023-01-11 13:15:16,857 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,857 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack228, pkt_len25
+2023-01-11 13:15:16,876 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq229, ack0, pkt_len1040
+2023-01-11 13:15:16,876 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,876 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack229, pkt_len25
+2023-01-11 13:15:16,899 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq230, ack0, pkt_len1040
+2023-01-11 13:15:16,899 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,899 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack230, pkt_len25
+2023-01-11 13:15:16,908 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq231, ack0, pkt_len1040
+2023-01-11 13:15:16,908 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,908 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack231, pkt_len25
+2023-01-11 13:15:16,918 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq232, ack0, pkt_len1040
+2023-01-11 13:15:16,918 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,918 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack232, pkt_len25
+2023-01-11 13:15:16,927 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq233, ack0, pkt_len1040
+2023-01-11 13:15:16,927 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,927 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack233, pkt_len25
+2023-01-11 13:15:16,950 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq234, ack0, pkt_len1040
+2023-01-11 13:15:16,950 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,950 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack234, pkt_len25
+2023-01-11 13:15:16,977 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq235, ack0, pkt_len1040
+2023-01-11 13:15:16,977 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,977 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack235, pkt_len25
+2023-01-11 13:15:16,987 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq236, ack0, pkt_len1040
+2023-01-11 13:15:16,987 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:16,987 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack236, pkt_len25
+2023-01-11 13:15:17,010 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq237, ack0, pkt_len1040
+2023-01-11 13:15:17,010 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,010 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack237, pkt_len25
+2023-01-11 13:15:17,021 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq238, ack0, pkt_len1040
+2023-01-11 13:15:17,021 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,021 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack238, pkt_len25
+2023-01-11 13:15:17,052 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq239, ack0, pkt_len1040
+2023-01-11 13:15:17,052 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,052 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack239, pkt_len25
+2023-01-11 13:15:17,067 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq240, ack0, pkt_len1040
+2023-01-11 13:15:17,067 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,067 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack240, pkt_len25
+2023-01-11 13:15:17,082 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq241, ack0, pkt_len1040
+2023-01-11 13:15:17,082 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,082 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack241, pkt_len25
+2023-01-11 13:15:17,098 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq242, ack0, pkt_len1040
+2023-01-11 13:15:17,098 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,098 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack242, pkt_len25
+2023-01-11 13:15:17,114 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq243, ack0, pkt_len1040
+2023-01-11 13:15:17,114 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,114 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack243, pkt_len25
+2023-01-11 13:15:17,127 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq244, ack0, pkt_len1040
+2023-01-11 13:15:17,127 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,127 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack244, pkt_len25
+2023-01-11 13:15:17,152 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq245, ack0, pkt_len1040
+2023-01-11 13:15:17,152 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,152 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack245, pkt_len25
+2023-01-11 13:15:17,165 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq246, ack0, pkt_len1040
+2023-01-11 13:15:17,165 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,165 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack246, pkt_len25
+2023-01-11 13:15:17,184 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq247, ack0, pkt_len1040
+2023-01-11 13:15:17,184 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,184 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack247, pkt_len25
+2023-01-11 13:15:17,206 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq248, ack0, pkt_len1040
+2023-01-11 13:15:17,206 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,206 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack248, pkt_len25
+2023-01-11 13:15:17,216 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq249, ack0, pkt_len1040
+2023-01-11 13:15:17,216 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,216 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack249, pkt_len25
+2023-01-11 13:15:17,225 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq250, ack0, pkt_len1040
+2023-01-11 13:15:17,225 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,226 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack250, pkt_len25
+2023-01-11 13:15:17,243 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq251, ack0, pkt_len1040
+2023-01-11 13:15:17,243 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,243 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack251, pkt_len25
+2023-01-11 13:15:17,252 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq252, ack0, pkt_len1040
+2023-01-11 13:15:17,252 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,252 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack252, pkt_len25
+2023-01-11 13:15:17,274 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq253, ack0, pkt_len1040
+2023-01-11 13:15:17,274 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,275 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack253, pkt_len25
+2023-01-11 13:15:17,302 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq254, ack0, pkt_len1040
+2023-01-11 13:15:17,302 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,302 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack254, pkt_len25
+2023-01-11 13:15:17,311 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq255, ack0, pkt_len1040
+2023-01-11 13:15:17,311 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,311 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack255, pkt_len25
+2023-01-11 13:15:17,326 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq256, ack0, pkt_len1040
+2023-01-11 13:15:17,326 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,326 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack256, pkt_len25
+2023-01-11 13:15:17,345 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq257, ack0, pkt_len1040
+2023-01-11 13:15:17,345 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,346 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack257, pkt_len25
+2023-01-11 13:15:17,368 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq258, ack0, pkt_len1040
+2023-01-11 13:15:17,368 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,368 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack258, pkt_len25
+2023-01-11 13:15:17,382 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq259, ack0, pkt_len1040
+2023-01-11 13:15:17,382 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,382 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack259, pkt_len25
+2023-01-11 13:15:17,398 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq260, ack0, pkt_len1040
+2023-01-11 13:15:17,398 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,398 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack260, pkt_len25
+2023-01-11 13:15:17,422 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq261, ack0, pkt_len1040
+2023-01-11 13:15:17,422 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,422 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack261, pkt_len25
+2023-01-11 13:15:17,429 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq262, ack0, pkt_len1040
+2023-01-11 13:15:17,429 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,429 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack262, pkt_len25
+2023-01-11 13:15:17,444 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq263, ack0, pkt_len1040
+2023-01-11 13:15:17,444 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,444 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack263, pkt_len25
+2023-01-11 13:15:17,459 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq264, ack0, pkt_len1040
+2023-01-11 13:15:17,459 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,459 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack264, pkt_len25
+2023-01-11 13:15:17,480 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq265, ack0, pkt_len1040
+2023-01-11 13:15:17,481 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,481 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack265, pkt_len25
+2023-01-11 13:15:17,499 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq266, ack0, pkt_len1040
+2023-01-11 13:15:17,499 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,500 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack266, pkt_len25
+2023-01-11 13:15:17,521 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq267, ack0, pkt_len1040
+2023-01-11 13:15:17,521 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,522 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack267, pkt_len25
+2023-01-11 13:15:17,532 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq268, ack0, pkt_len1040
+2023-01-11 13:15:17,532 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,532 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack268, pkt_len25
+2023-01-11 13:15:17,542 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq269, ack0, pkt_len1040
+2023-01-11 13:15:17,542 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,542 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack269, pkt_len25
+2023-01-11 13:15:17,559 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq270, ack0, pkt_len1040
+2023-01-11 13:15:17,559 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,559 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack270, pkt_len25
+2023-01-11 13:15:17,577 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq271, ack0, pkt_len1040
+2023-01-11 13:15:17,577 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,577 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack271, pkt_len25
+2023-01-11 13:15:17,586 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq272, ack0, pkt_len1040
+2023-01-11 13:15:17,586 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,586 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack272, pkt_len25
+2023-01-11 13:15:17,607 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq273, ack0, pkt_len1040
+2023-01-11 13:15:17,607 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,608 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack273, pkt_len25
+2023-01-11 13:15:17,626 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq274, ack0, pkt_len1040
+2023-01-11 13:15:17,626 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,627 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack274, pkt_len25
+2023-01-11 13:15:17,644 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq275, ack0, pkt_len1040
+2023-01-11 13:15:17,645 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,645 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack275, pkt_len25
+2023-01-11 13:15:17,651 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq276, ack0, pkt_len1040
+2023-01-11 13:15:17,651 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,651 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack276, pkt_len25
+2023-01-11 13:15:17,670 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq277, ack0, pkt_len1040
+2023-01-11 13:15:17,670 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,670 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack277, pkt_len25
+2023-01-11 13:15:17,692 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq278, ack0, pkt_len1040
+2023-01-11 13:15:17,692 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,692 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack278, pkt_len25
+2023-01-11 13:15:17,707 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq279, ack0, pkt_len1040
+2023-01-11 13:15:17,707 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,707 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack279, pkt_len25
+2023-01-11 13:15:17,722 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq280, ack0, pkt_len1040
+2023-01-11 13:15:17,723 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,723 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack280, pkt_len25
+2023-01-11 13:15:17,746 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq281, ack0, pkt_len1040
+2023-01-11 13:15:17,746 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,746 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack281, pkt_len25
+2023-01-11 13:15:17,753 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq282, ack0, pkt_len1040
+2023-01-11 13:15:17,754 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,754 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack282, pkt_len25
+2023-01-11 13:15:17,769 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq283, ack0, pkt_len1040
+2023-01-11 13:15:17,769 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,769 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack283, pkt_len25
+2023-01-11 13:15:17,784 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq284, ack0, pkt_len1040
+2023-01-11 13:15:17,784 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,784 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack284, pkt_len25
+2023-01-11 13:15:17,805 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq285, ack0, pkt_len1040
+2023-01-11 13:15:17,805 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,805 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack285, pkt_len25
+2023-01-11 13:15:17,824 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq286, ack0, pkt_len1040
+2023-01-11 13:15:17,824 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,824 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack286, pkt_len25
+2023-01-11 13:15:17,838 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq287, ack0, pkt_len1040
+2023-01-11 13:15:17,838 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,838 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack287, pkt_len25
+2023-01-11 13:15:17,856 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq288, ack0, pkt_len1040
+2023-01-11 13:15:17,856 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,856 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack288, pkt_len25
+2023-01-11 13:15:17,866 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq289, ack0, pkt_len1040
+2023-01-11 13:15:17,866 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,866 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack289, pkt_len25
+2023-01-11 13:15:17,883 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq290, ack0, pkt_len1040
+2023-01-11 13:15:17,883 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,883 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack290, pkt_len25
+2023-01-11 13:15:17,901 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq291, ack0, pkt_len1040
+2023-01-11 13:15:17,901 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,901 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack291, pkt_len25
+2023-01-11 13:15:17,919 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq292, ack0, pkt_len1040
+2023-01-11 13:15:17,919 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,919 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:17,931 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq294, ack0, pkt_len1040
+2023-01-11 13:15:17,931 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,932 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:17,951 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq295, ack0, pkt_len1040
+2023-01-11 13:15:17,951 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,951 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:17,968 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq296, ack0, pkt_len1040
+2023-01-11 13:15:17,968 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,969 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:17,975 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq297, ack0, pkt_len1040
+2023-01-11 13:15:17,975 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,975 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:17,994 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq298, ack0, pkt_len1040
+2023-01-11 13:15:17,994 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:17,994 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,015 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq299, ack0, pkt_len1040
+2023-01-11 13:15:18,015 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,016 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,031 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq300, ack0, pkt_len1040
+2023-01-11 13:15:18,031 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,031 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,046 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq301, ack0, pkt_len1040
+2023-01-11 13:15:18,047 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,047 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,070 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq302, ack0, pkt_len1040
+2023-01-11 13:15:18,070 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,070 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,077 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq303, ack0, pkt_len1040
+2023-01-11 13:15:18,078 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,078 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,093 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq304, ack0, pkt_len1040
+2023-01-11 13:15:18,093 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,093 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,108 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq305, ack0, pkt_len1040
+2023-01-11 13:15:18,108 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,108 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,130 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq306, ack0, pkt_len1040
+2023-01-11 13:15:18,130 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,130 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,148 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq307, ack0, pkt_len1040
+2023-01-11 13:15:18,148 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,148 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,162 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq308, ack0, pkt_len1040
+2023-01-11 13:15:18,162 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,162 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,180 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq309, ack0, pkt_len1040
+2023-01-11 13:15:18,180 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,180 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,190 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq310, ack0, pkt_len1040
+2023-01-11 13:15:18,190 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,190 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,207 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq311, ack0, pkt_len1040
+2023-01-11 13:15:18,208 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,208 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,225 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq312, ack0, pkt_len1040
+2023-01-11 13:15:18,225 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,226 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,243 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq313, ack0, pkt_len1040
+2023-01-11 13:15:18,243 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,244 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack292, pkt_len25
+2023-01-11 13:15:18,266 -+- PEER13_LOGGER -+- DEBUG -+- Receiving a type3 pkt from ('127.0.0.1', 48007) via spiffy, seq293, ack0, pkt_len1040
+2023-01-11 13:15:18,266 -+- PEER13_LOGGER -+- INFO -+- timeout:3
+2023-01-11 13:15:18,266 -+- PEER13_LOGGER -+- DEBUG -+- sending a type4 pkt to ('127.0.0.1', 48007) via spiffy, seq0, ack313, pkt_len25
+2023-01-11 13:15:18,367 -+- PEER13_LOGGER -+- INFO -+- start change: old:('127.0.0.1', 48004)
+2023-01-11 13:15:18,367 -+- PEER13_LOGGER -+- INFO -+- 1 key:8492d9ebfa75967906856426ecaf8f6fee35680d  value:[[('127.0.0.1', 48004)], 0]
+2023-01-11 13:15:18,367 -+- PEER13_LOGGER -+- INFO -+- correct
+2023-01-11 13:15:18,367 -+- PEER13_LOGGER -+- INFO -+- key:8492d9ebfa75967906856426ecaf8f6fee35680d  value:[[('127.0.0.1', 48004)], 1]
+2023-01-11 13:15:18,367 -+- PEER13_LOGGER -+- INFO -+- 1 key:ffcbf7387375ae06a87336744f6bf7f9d6e8f905  value:[[('127.0.0.1', 48007)], 0]
+2023-01-11 13:15:18,467 -+- PEER13_LOGGER -+- INFO -+- start change: old:('127.0.0.1', 48004)
+2023-01-11 13:15:18,467 -+- PEER13_LOGGER -+- INFO -+- 1 key:8492d9ebfa75967906856426ecaf8f6fee35680d  value:[[('127.0.0.1', 48004)], 1]
+2023-01-11 13:15:18,468 -+- PEER13_LOGGER -+- INFO -+- socket closed

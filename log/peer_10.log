@@ -1,0 +1,24 @@
+GRADER: PeerProc {} createdPROCESS GET SKELETON CODE CALLED.  Fill me in! I've been doing! ( test/tmp5/targets/target3.chunkhash ,      test/tmp5/results/result3.fragment )
+2023-01-11 13:15:06
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!one friend
+1
+whohas: , has: ['304fe0401e6823854ca704426f6e43194828c78b', 'cc2313d46afc0ac433e9caaab511c8d54c96b0d6']
+whohas: , has: ['304fe0401e6823854ca704426f6e43194828c78b', 'cc2313d46afc0ac433e9caaab511c8d54c96b0d6']
+whohas: , has: ['304fe0401e6823854ca704426f6e43194828c78b', 'cc2313d46afc0ac433e9caaab511c8d54c96b0d6']
+354e2ea443bc30611c85175d5d0506f06e2c2644
+receiver all from one friend
+0
+dict_keys(['354e2ea443bc30611c85175d5d0506f06e2c2644'])
+GOT test/tmp5/results/result3.fragment
+Expected chunkhash: 354e2ea443bc30611c85175d5d0506f06e2c2644
+Received chunkhash: eb5c36f533834c13de975a4061d38f26176685b8
+Successful received: False
+Example fails. Please check the example files carefully.
+Traceback (most recent call last):
+  File "src/peer.py", line 423, in <module>
+    peer_run(config)
+  File "src/peer.py", line 395, in peer_run
+    change_peer(sock, check_peers_crash[i][1])
+  File "src/peer.py", line 51, in change_peer
+    if value[0][value[1]] == from_addr:
+IndexError: list index out of range
