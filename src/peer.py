@@ -312,6 +312,7 @@ def process_inbound_udp(sock):
         current_sending_seq[str(from_addr)] = max(current_sending_seq[str(from_addr)], ack_num + 1)
         sock.add_log('a')
         cwnd = int(connections[str(from_addr)][0])
+        sock.add_log('z')
         cwnd_time.append([time.time() - cwnd_starttime, cwnd])
         sock.add_log('b')
         ssthresh = connections[str(from_addr)][1]
@@ -344,13 +345,6 @@ def process_inbound_udp(sock):
             if index in timer.keys():
                 del timer[index]
             sock.add_log('sender all')
-            plt.figure()
-            plt.plot([i[0] for i in cwnd_time], [i[1] for i in cwnd_time], markersize=0.1)
-            plt.xlabel("Time(s)")
-            plt.ylabel("Window size")
-            plt.title("Sending Window Size")
-            plt.savefig("Window_Size.png")
-            plt.show()
             # finished
             print(f"finished sending {ex_sending_chunkhash}")
             pass
@@ -398,6 +392,14 @@ def process_inbound_udp(sock):
                                               0,
                                               socket.htonl(cwnd), socket.htonl(ssthresh), status)
                     sock.add_log(f'left:{left}  seq:{current_sending_seq[str(from_addr)]}')
+                    if current_sending_seq[str(from_addr)] == 500:
+                        plt.figure()
+                        plt.plot([i[0] for i in cwnd_time], [i[1] for i in cwnd_time], markersize=0.1)
+                        plt.xlabel("Time(s)")
+                        plt.ylabel("Window size")
+                        plt.title("Sending Window Size")
+                        plt.savefig("Window_Size.png")
+                        plt.show()
                     sock.sendto(data_header + next_data, from_addr)
                     sock.add_log(f'finish send')
 
