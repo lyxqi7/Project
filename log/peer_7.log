@@ -1,1 +1,21 @@
-GRADER: PeerProc {} createdwhohas: , has: ['12e3340d8b1a692c6580c897c0e26bd1ac0eaadf', '45acace8e984465459c893197e593c36daf653db']
+GRADER: PeerProc {} createdPROCESS GET SKELETON CODE CALLED.  Fill me in! I've been doing! ( test/tmp5/targets/target2.chunkhash ,      test/tmp5/results/result2.fragment )
+2023-01-12 15:24:02
+whohas: , has: ['3bff0a405508e511b8d0208498e720e8e8319714', '32e46fd3676d3a448388046e22426f0640c2ef50']
+whohas: , has: ['3bff0a405508e511b8d0208498e720e8e8319714', '32e46fd3676d3a448388046e22426f0640c2ef50']
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!one friend
+1
+whohas: , has: ['3bff0a405508e511b8d0208498e720e8e8319714', '32e46fd3676d3a448388046e22426f0640c2ef50']
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!one friend
+2
+0637dfeb4b30593b1fe4271e0db6cd24ad198ab7
+receiver all from one friend
+1
+0cabb7ca8300b66e0d5d3bf2b16d0f28de3e2c4b
+receiver all from one friend
+0
+dict_keys(['0637dfeb4b30593b1fe4271e0db6cd24ad198ab7', '0cabb7ca8300b66e0d5d3bf2b16d0f28de3e2c4b'])
+GOT test/tmp5/results/result2.fragment
+Expected chunkhash: 0cabb7ca8300b66e0d5d3bf2b16d0f28de3e2c4b
+Received chunkhash: 0cabb7ca8300b66e0d5d3bf2b16d0f28de3e2c4b
+Successful received: True
+Congrats! You have completed the example!

@@ -325,7 +325,7 @@ def process_inbound_udp(sock):
         dupACKcount[index] = dupACKcount[index] + 1
         sock.add_log('f')
         sock.add_log(f'{dupACKcount[index]}')
-        if dupACKcount[index] == 3:  # 触发快重传
+        if dupACKcount[index] == 4:  # 触发快重传
             sock.add_log('g')
             for i in range(512):
                 del_index = str(from_addr) + str(i + 1)
@@ -335,7 +335,6 @@ def process_inbound_udp(sock):
             if should_dup_send_index in packages.keys():
                 sock.sendto(packages[should_dup_send_index][1], packages[should_dup_send_index][0])
                 timer[should_dup_send_index] = [time.time(), from_addr, packages[should_dup_send_index][1]]
-            dupACKcount[index] = 0
             current_sending_seq[str(from_addr)] = ack_num + 2
             connections[str(from_addr)][0] = 1
             connections[str(from_addr)][1] = max(int(cwnd / 2), 2)
@@ -356,7 +355,8 @@ def process_inbound_udp(sock):
                     if many_index in timer.keys():
                         del timer[many_index]
             if status == 0:
-                connections[str(from_addr)][0] += cwnd_add
+                if cwnd_add > 0:
+                    connections[str(from_addr)][0] += 1
                 if cwnd >= ssthresh:
                     connections[str(from_addr)][2] = 1
             else:
