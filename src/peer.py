@@ -48,6 +48,7 @@ get_packet_send = []
 last_receive_ack = dict()
 num = 0
 address_num = dict()
+addr_num = dict()
 
 
 def change_peer(sock, from_addr):
@@ -150,6 +151,7 @@ def process_inbound_udp(sock):
     global is_first_get
     global num
     global address_num
+    global addr_num
     pkt, from_addr = sock.recvfrom(BUF_SIZE)
     magic_raw, Team, Type, hlen_raw, plen_raw, Seq_raw, Ack_raw = struct.unpack("HBBHHII", pkt[:HEADER_LEN])
     data = pkt[HEADER_LEN:]
@@ -161,6 +163,7 @@ def process_inbound_udp(sock):
         # bytes to hex_str
         what_I_have = bytes()
         Send_IHAVE = False
+        addr_chunk_num = 0
 
 
         for i in range(len(whohas_chunk_hash) // 20):
@@ -169,7 +172,8 @@ def process_inbound_udp(sock):
                 Send_IHAVE = True
                 what_I_have = what_I_have + whohas_chunk_hash[20 * i:20 * i + 20]
                 ex_sending_chunkhash[num] = chunkhash_str
-                address_num[str(from_addr)] = num
+                address_num[str(from_addr)+str(addr_chunk_num)] = num
+                addr_chunk_num += 1
                 num += 1
 
         print(f"whohas: {bytes.hex(what_I_have)}, has: {list(config.haschunks.keys())}")
@@ -216,6 +220,8 @@ def process_inbound_udp(sock):
 
     elif Type == 2:
         # received a GET pkt
+        addr_num.setdefault(from_addr, -1)
+        addr_num[from_addr] += 1
         chunk_data = config.haschunks[bytes.hex(data[:20])][:MAX_PAYLOAD]
 
         # send back DATA
@@ -381,9 +387,9 @@ def process_inbound_udp(sock):
                     if right > CHUNK_DATA_SIZE or left >= right:
                         break
                     sock.add_log(f'start for')
-                    sock.add_log(f'hash_num:{address_num[str(from_addr)]}')
+                    sock.add_log(f'hash_num:{address_num[str(from_addr)+str(addr_num[from_addr])]}')
 
-                    next_data = config.haschunks[ex_sending_chunkhash[address_num[str(from_addr)]]][left: right]
+                    next_data = config.haschunks[ex_sending_chunkhash[address_num[str(from_addr)+str(addr_num[from_addr])]]][left: right]
                     sock.add_log(f'send in for')
                     # send next data
                     data_header = struct.pack("HBBHHIIIIB", socket.htons(52305), 44, 3, socket.htons(HEADER_LEN),
@@ -392,14 +398,7 @@ def process_inbound_udp(sock):
                                               0,
                                               socket.htonl(cwnd), socket.htonl(ssthresh), status)
                     sock.add_log(f'left:{left}  seq:{current_sending_seq[str(from_addr)]}')
-                    if current_sending_seq[str(from_addr)] == 500:
-                        plt.figure()
-                        plt.plot([i[0] for i in cwnd_time], [i[1] for i in cwnd_time], markersize=0.1)
-                        plt.xlabel("Time(s)")
-                        plt.ylabel("Window size")
-                        plt.title("Sending Window Size")
-                        plt.savefig("Window_Size.png")
-                        plt.show()
+
                     sock.sendto(data_header + next_data, from_addr)
                     sock.add_log(f'finish send')
 
