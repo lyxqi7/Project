@@ -136,4 +136,4 @@ def check_target_result(target_file, result_file):
         sha1 = hashlib.sha1()
         sha1.update(result_fragments[th])
         received_hash_str = sha1.hexdigest()
-        assert th.strip() == received_hash_str.strip(), f"received data mismatch for target {target_file}, expect hash: {target_hash}, actual: {received_hash_str}"
+        assert th.strip() == received_hash_str.strip(), f"received data mismatch for target {target_file}, expect hash: {th}, actual: {received_hash_str}"

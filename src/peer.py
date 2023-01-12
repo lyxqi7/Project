@@ -3,6 +3,7 @@ import os
 import time
 import datetime
 from matplotlib import pyplot as plt
+
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 import select
 import util.simsocket as simsocket
@@ -44,6 +45,10 @@ cwnd_time = []
 cwnd_starttime = time.time()
 chunk_hash_num = 0
 get_packet_send = []
+last_receive_ack = dict()
+num = 0
+address_num = dict()
+
 
 def change_peer(sock, from_addr):
     new_addr = from_addr
@@ -98,8 +103,6 @@ def process_download(sock, chunkfile, outputfile):
     global cwnd_time
     global cwnd_starttime
 
-
-
     ex_output_file = outputfile
     # Step 1: read chunkhash to be downloaded from chunkfile
     download_hash = bytes()
@@ -145,6 +148,8 @@ def process_inbound_udp(sock):
     global chunk_hash_num
     global get_packet_send
     global is_first_get
+    global num
+    global address_num
     pkt, from_addr = sock.recvfrom(BUF_SIZE)
     magic_raw, Team, Type, hlen_raw, plen_raw, Seq_raw, Ack_raw = struct.unpack("HBBHHII", pkt[:HEADER_LEN])
     data = pkt[HEADER_LEN:]
@@ -156,7 +161,7 @@ def process_inbound_udp(sock):
         # bytes to hex_str
         what_I_have = bytes()
         Send_IHAVE = False
-        num = 0
+
 
         for i in range(len(whohas_chunk_hash) // 20):
             chunkhash_str = bytes.hex(whohas_chunk_hash[20 * i:20 * i + 20])
@@ -164,6 +169,7 @@ def process_inbound_udp(sock):
                 Send_IHAVE = True
                 what_I_have = what_I_have + whohas_chunk_hash[20 * i:20 * i + 20]
                 ex_sending_chunkhash[num] = chunkhash_str
+                address_num[str(from_addr)] = num
                 num += 1
 
         print(f"whohas: {bytes.hex(what_I_have)}, has: {list(config.haschunks.keys())}")
@@ -194,7 +200,7 @@ def process_inbound_udp(sock):
                                          socket.htons(HEADER_LEN + len(get_chunk_hash)), socket.htonl(0),
                                          socket.htonl(0))
                 get_pkt = get_header + get_chunk_hash
-                if is_first_get: # 首次发送get
+                if is_first_get:  # 首次发送get
                     sock.sendto(get_pkt, from_addr)
                     is_first_get = False
                 else:
@@ -223,80 +229,87 @@ def process_inbound_udp(sock):
         connections[str(from_addr)] = [1, 64, 0]
         sock.sendto(data_header + chunk_data, from_addr)
         current_sending_seq[str(from_addr)] = 2
+        last_receive_ack[str(from_addr)] = 0
     elif Type == 3:
         # received a DATA pkt
         seq_num = socket.ntohl(Seq_raw)
-        data = pkt[header_len:]
-        ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]][socket.ntohl(Seq_raw)] = data
-        while True:
-            if current_receive_seq[str(from_addr)]+1 not in \
-                    ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]].keys():
-                break
-            current_receive_seq[str(from_addr)] += 1
-        check_peers_crash[str(from_addr)] = [time.time(), from_addr]
-        # print(socket.ntohl(Seq_raw))
-        seq_max = max(seq_max, socket.ntohl(Seq_raw))
-        ex_received_chunk[ex_downloading_chunkhash[from_addr]] += data
-        """
-                    这里是不是不能直接加，中间可能有丢包，考虑用一个字典存数据，key为seq，value为data，如果满了就dump
-                """
-        cwnd, ssthresh, status = struct.unpack("IIB", pkt[HEADER_LEN:header_len])
-        # send back ACK
-        ack_pkt = struct.pack("HBBHHIIIIB", socket.htons(52305), 44, 4, socket.htons(header_len),
-                              socket.htons(header_len),
-                              0, socket.htonl(current_receive_seq[str(from_addr)]), cwnd, ssthresh, status)
+        if seq_num not in ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]].keys():
+            data = pkt[header_len:]
+            ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]][socket.ntohl(Seq_raw)] = data
+            while True:
+                if current_receive_seq[str(from_addr)] + 1 not in \
+                        ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]].keys():
+                    break
+                current_receive_seq[str(from_addr)] += 1
+            check_peers_crash[str(from_addr)] = [time.time(), from_addr]
+            # print(socket.ntohl(Seq_raw))
+            seq_max = max(seq_max, socket.ntohl(Seq_raw))
+            ex_received_chunk[ex_downloading_chunkhash[from_addr]] += data
+            """
+                        这里是不是不能直接加，中间可能有丢包，考虑用一个字典存数据，key为seq，value为data，如果满了就dump
+                    """
+            cwnd, ssthresh, status = struct.unpack("IIB", pkt[HEADER_LEN:header_len])
+            # send back ACK
+            ack_pkt = struct.pack("HBBHHIIIIB", socket.htons(52305), 44, 4, socket.htons(header_len),
+                                  socket.htons(header_len),
+                                  0, socket.htonl(current_receive_seq[str(from_addr)]), cwnd, ssthresh, status)
+            sock.sendto(ack_pkt, from_addr)
+            sock.add_log(
+                f'len1:{len(ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]])}   len2:{len(get_packet_send)}')
+            # see if finished
+            if len(ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]]) == 512 and len(get_packet_send) == 0:
+                sock.add_log('receiver all')
+                del check_peers_crash[str(from_addr)]
+                sock.add_log('receiver all 2')
+                peer_friends -= 1
+                print(ex_downloading_chunkhash[from_addr])
+                print('receiver all from one friend')
+                print(peer_friends)
 
-        sock.sendto(ack_pkt, from_addr)
+                received_chunk[ex_downloading_chunkhash[from_addr]] = bytes()
+                for i in range(seq_max):
+                    received_chunk[ex_downloading_chunkhash[from_addr]] += \
+                        ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]][i + 1]
 
-        # see if finished
-        if len(ex_received_chunk[ex_downloading_chunkhash[from_addr]]) == CHUNK_DATA_SIZE and len(get_packet_send) == 0:
+                # finished downloading this chunkdata!
+                # dump your received chunk to file in dict form using pickle
 
-            sock.add_log('receiver all')
-            peer_friends -= 1
-            print(ex_downloading_chunkhash[from_addr])
-            print('receiver all from one friend')
-            print(peer_friends)
+                if peer_friends == 0:
+                    with open(ex_output_file, "wb") as wf:
+                        pickle.dump(received_chunk, wf)
+                    print(received_chunk.keys())
 
-            received_chunk[ex_downloading_chunkhash[from_addr]] = bytes()
-            for i in range(seq_max):
-                received_chunk[ex_downloading_chunkhash[from_addr]] += \
-                    ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]][i + 1]
+                    # add to this peer's haschunk:
+                    config.haschunks[ex_downloading_chunkhash[from_addr]] = received_chunk[
+                        ex_downloading_chunkhash[from_addr]]
 
-            # finished downloading this chunkdata!
-            # dump your received chunk to file in dict form using pickle
-            if peer_friends == 0:
+                    # you need to print "GOT" when finished downloading all chunks in a DOWNLOAD file
+                    print(f"GOT {ex_output_file}")
 
-                with open(ex_output_file, "wb") as wf:
-                    pickle.dump(received_chunk, wf)
-                print(received_chunk.keys())
-
-                # add to this peer's haschunk:
-                config.haschunks[ex_downloading_chunkhash[from_addr]] = received_chunk[
-                    ex_downloading_chunkhash[from_addr]]
-
-                # you need to print "GOT" when finished downloading all chunks in a DOWNLOAD file
-                print(f"GOT {ex_output_file}")
-
-                # The following things are just for illustration, you do not need to print out in your design.
-                sha1 = hashlib.sha1()
-                sha1.update(ex_received_chunk[ex_downloading_chunkhash[from_addr]])
-                received_chunkhash_str = sha1.hexdigest()
-                print(f"Expected chunkhash: {ex_downloading_chunkhash[from_addr]}")
-                print(f"Received chunkhash: {received_chunkhash_str}")
-                success = ex_downloading_chunkhash[from_addr] == received_chunkhash_str
-                print(f"Successful received: {success}")
-                if success:
-                    print("Congrats! You have completed the example!")
-                else:
-                    print("Example fails. Please check the example files carefully.")
-        if len(ex_received_chunk[ex_downloading_chunkhash[from_addr]]) == CHUNK_DATA_SIZE and len(get_packet_send) != 0:
-            sock.sendto(get_packet_send[0][0], get_packet_send[0][1])
-            get_packet_send = get_packet_send[1:]
-            chunk_hash_num += 1
+                    # The following things are just for illustration, you do not need to print out in your design.
+                    sha1 = hashlib.sha1()
+                    sha1.update(received_chunk[ex_downloading_chunkhash[from_addr]])
+                    received_chunkhash_str = sha1.hexdigest()
+                    print(f"Expected chunkhash: {ex_downloading_chunkhash[from_addr]}")
+                    print(f"Received chunkhash: {received_chunkhash_str}")
+                    success = ex_downloading_chunkhash[from_addr] == received_chunkhash_str
+                    print(f"Successful received: {success}")
+                    if success:
+                        print("Congrats! You have completed the example!")
+                    else:
+                        print("Example fails. Please check the example files carefully.")
+            if len(ex_received_chunk[ex_downloading_chunkhash[from_addr]]) == CHUNK_DATA_SIZE and len(
+                    get_packet_send) != 0:
+                sock.sendto(get_packet_send[0][0], get_packet_send[0][1])
+                get_packet_send = get_packet_send[1:]
+                chunk_hash_num += 1
     elif Type == 4:
         # received an ACK pkt
         data = pkt[header_len:]
         ack_num = socket.ntohl(Ack_raw)
+        cwnd_add = ack_num - last_receive_ack[str(from_addr)]
+        last_receive_ack[str(from_addr)] = ack_num
+        current_sending_seq[str(from_addr)] = max(current_sending_seq[str(from_addr)], ack_num + 1)
         sock.add_log('a')
         cwnd = int(connections[str(from_addr)][0])
         cwnd_time.append([time.time() - cwnd_starttime, cwnd])
@@ -313,13 +326,23 @@ def process_inbound_udp(sock):
         sock.add_log(f'{dupACKcount[index]}')
         if dupACKcount[index] == 3:  # 触发快重传
             sock.add_log('g')
-            should_dup_send_index = str(from_addr) + str(ack_num+1)
+            for i in range(512):
+                del_index = str(from_addr) + str(i + 1)
+                if del_index in timer.keys():
+                    del timer[del_index]
+            should_dup_send_index = str(from_addr) + str(ack_num + 1)
             if should_dup_send_index in packages.keys():
                 sock.sendto(packages[should_dup_send_index][1], packages[should_dup_send_index][0])
+                timer[should_dup_send_index] = [time.time(), from_addr, packages[should_dup_send_index][1]]
+            dupACKcount[index] = 0
+            current_sending_seq[str(from_addr)] = ack_num + 2
             connections[str(from_addr)][0] = 1
             connections[str(from_addr)][1] = max(int(cwnd / 2), 2)
             connections[str(from_addr)][2] = 0
+            return
         if (ack_num) * MAX_PAYLOAD >= CHUNK_DATA_SIZE:
+            if index in timer.keys():
+                del timer[index]
             sock.add_log('sender all')
             plt.figure()
             plt.plot([i[0] for i in cwnd_time], [i[1] for i in cwnd_time], markersize=0.1)
@@ -333,53 +356,59 @@ def process_inbound_udp(sock):
             pass
         else:
             sock.add_log(f'bb cwnd:{int(cwnd)}  timer:{len(timer)}  status:{status}')
-            if index in timer.keys():
-                del timer[index]
-                for i in range(1, ack_num):
-                    many_index = str(from_addr) + str(i)
-                    if len(timer) > 0:
-                        if many_index in timer.keys():
-                            del timer[many_index]
-                if status == 0:
-                    connections[str(from_addr)][0] += 1
-                    if cwnd >= ssthresh:
-                        connections[str(from_addr)][2] = 1
-                else:
-                    connections[str(from_addr)][0] += 1 / cwnd
-                cwnd = int(connections[str(from_addr)][0])
-                cwnd_time.append([time.time() - cwnd_starttime, cwnd])
-                ssthresh = connections[str(from_addr)][1]
-                status = connections[str(from_addr)][2]
-                send_num = int(cwnd) - len(timer)
-                sock.add_log(f'cwnd:{int(cwnd)}  timer:{len(timer)}  status:{status}  send_num:{send_num}')
-                left = (current_sending_seq[str(from_addr)] - 1) * MAX_PAYLOAD
-                right = min((current_sending_seq[str(from_addr)]) * MAX_PAYLOAD
-                            , CHUNK_DATA_SIZE)
-                sock.add_log(f'before for')
-                if send_num > 0:
-                    for i in range(send_num):
-                        if right > CHUNK_DATA_SIZE or left >= right:
-                            break
-                        sock.add_log(f'start for')
-                        next_data = config.haschunks[ex_sending_chunkhash[chunk_hash_num]][left: right]
-                        sock.add_log(f'send in for')
-                        # send next data
-                        data_header = struct.pack("HBBHHIIIIB", socket.htons(52305), 44, 3, socket.htons(HEADER_LEN),
-                                                  socket.htons(HEADER_LEN + len(next_data)),
-                                                  socket.htonl(current_sending_seq[str(from_addr)]),
-                                                  0,
-                                                  socket.htonl(cwnd), socket.htonl(ssthresh), status)
-                        sock.sendto(data_header + next_data, from_addr)
-                        sock.add_log(f'finish send')
+            for i in range(1, ack_num + 1):
+                many_index = str(from_addr) + str(i)
+                if len(timer) > 0:
+                    if many_index in timer.keys():
+                        del timer[many_index]
+            if status == 0:
+                connections[str(from_addr)][0] += cwnd_add
+                if cwnd >= ssthresh:
+                    connections[str(from_addr)][2] = 1
+            else:
+                connections[str(from_addr)][0] += 1 / cwnd
+            cwnd = int(connections[str(from_addr)][0])
+            cwnd_time.append([time.time() - cwnd_starttime, cwnd])
+            ssthresh = connections[str(from_addr)][1]
+            status = connections[str(from_addr)][2]
+            count = 0
+            for i in range(512):
+                count_index = str(from_addr) + str(i + 1)
+                if count_index in timer.keys():
+                    count += 1
+            send_num = int(cwnd) - count
+            sock.add_log(f'cwnd:{int(cwnd)}  timer:{count}  status:{status}  send_num:{send_num}')
+            left = (current_sending_seq[str(from_addr)] - 1) * MAX_PAYLOAD
+            right = min((current_sending_seq[str(from_addr)]) * MAX_PAYLOAD
+                        , CHUNK_DATA_SIZE)
+            sock.add_log(f'before for')
+            if send_num > 0:
+                for i in range(send_num):
+                    if right > CHUNK_DATA_SIZE or left >= right:
+                        break
+                    sock.add_log(f'start for')
+                    sock.add_log(f'hash_num:{address_num[str(from_addr)]}')
 
-                        timer[str(from_addr) + str(current_sending_seq[str(from_addr)])] = [time.time(), from_addr,
-                                                                                            data_header + next_data]  # 给data包一个定时器
-                        dupACKcount[str(from_addr) + str(current_sending_seq[str(from_addr)])] = 0  # 给data包定一个ack触发器
-                        packages[str(from_addr) + str(current_sending_seq[str(from_addr)])] = [from_addr,
-                                                                                               data_header + next_data]
-                        current_sending_seq[str(from_addr)] += 1
-                        left = (current_sending_seq[str(from_addr)] - 1) * MAX_PAYLOAD
-                        right = (current_sending_seq[str(from_addr)]) * MAX_PAYLOAD
+                    next_data = config.haschunks[ex_sending_chunkhash[address_num[str(from_addr)]]][left: right]
+                    sock.add_log(f'send in for')
+                    # send next data
+                    data_header = struct.pack("HBBHHIIIIB", socket.htons(52305), 44, 3, socket.htons(HEADER_LEN),
+                                              socket.htons(HEADER_LEN + len(next_data)),
+                                              socket.htonl(current_sending_seq[str(from_addr)]),
+                                              0,
+                                              socket.htonl(cwnd), socket.htonl(ssthresh), status)
+                    sock.add_log(f'left:{left}  seq:{current_sending_seq[str(from_addr)]}')
+                    sock.sendto(data_header + next_data, from_addr)
+                    sock.add_log(f'finish send')
+
+                    timer[str(from_addr) + str(current_sending_seq[str(from_addr)])] = [time.time(), from_addr,
+                                                                                        data_header + next_data]  # 给data包一个定时器
+                    dupACKcount[str(from_addr) + str(current_sending_seq[str(from_addr)])] = 0  # 给data包定一个ack触发器
+                    packages[str(from_addr) + str(current_sending_seq[str(from_addr)])] = [from_addr,
+                                                                                           data_header + next_data]
+                    current_sending_seq[str(from_addr)] += 1
+                    left = (current_sending_seq[str(from_addr)] - 1) * MAX_PAYLOAD
+                    right = (current_sending_seq[str(from_addr)]) * MAX_PAYLOAD
 
 
 def process_user_input(sock):
@@ -408,7 +437,26 @@ def peer_run(config):
                 # No pkt nor input arrives during this period
                 for i in timer.keys():  # 超时重传
                     if time.time() - timer[i][0] > 3:
+                        _, _, _, _, _, Seq_raw, _ = struct.unpack("HBBHHII", timer[i][2][:HEADER_LEN])
+                        from_addr = timer[i][1]
                         sock.sendto(timer[i][2], timer[i][1])
+                        sock.add_log('x')
+                        data = timer[i][2]
+                        for j in range(512):
+                            del_index = str(from_addr) + str(j + 1)
+                            if del_index in timer.keys():
+                                del timer[del_index]
+                        sock.add_log('xx')
+                        timer[i] = [time.time(), from_addr, data]
+                        sock.add_log('xxx')
+                        current_sending_seq[str(from_addr)] = socket.ntohl(Seq_raw) + 1
+                        sock.add_log('xxx')
+                        cwnd = connections[str(from_addr)][0]
+                        sock.add_log('xxxx')
+                        connections[str(from_addr)][0] = 1
+                        connections[str(from_addr)][1] = max(int(cwnd / 2), 2)
+                        connections[str(from_addr)][2] = 0
+                        break
                 for i in check_peers_crash.keys():
                     if time.time() - check_peers_crash[i][0] > 5:
                         change_peer(sock, check_peers_crash[i][1])
