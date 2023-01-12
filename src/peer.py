@@ -42,6 +42,8 @@ chunk_peers = dict()
 check_peers_crash = dict()
 cwnd_time = []
 cwnd_starttime = time.time()
+chunk_hash_num = 0
+get_packet_send = []
 
 def change_peer(sock, from_addr):
     new_addr = from_addr
@@ -96,6 +98,8 @@ def process_download(sock, chunkfile, outputfile):
     global cwnd_time
     global cwnd_starttime
 
+
+
     ex_output_file = outputfile
     # Step 1: read chunkhash to be downloaded from chunkfile
     download_hash = bytes()
@@ -138,6 +142,9 @@ def process_inbound_udp(sock):
     global peer_friends
     global received_chunk
     global current_sending_seq
+    global chunk_hash_num
+    global get_packet_send
+    global is_first_get
     pkt, from_addr = sock.recvfrom(BUF_SIZE)
     magic_raw, Team, Type, hlen_raw, plen_raw, Seq_raw, Ack_raw = struct.unpack("HBBHHII", pkt[:HEADER_LEN])
     data = pkt[HEADER_LEN:]
@@ -172,11 +179,13 @@ def process_inbound_udp(sock):
         # see what chunk the sender has
         print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!one friend")
         whohas_chunk_hash = data[:socket.ntohs(plen_raw) - HEADER_LEN]
+        is_first_get = True
 
         for i in range(len(whohas_chunk_hash) // 20):
             get_chunk_hash = data[20 * i:20 * i + 20]
             ex_downloading_chunkhash[from_addr] = bytes.hex(get_chunk_hash)
             ex_received_chunk_seq[ex_downloading_chunkhash[from_addr]] = dict()
+
             if len(chunk_peers[bytes.hex(get_chunk_hash)]) == 0:
                 peer_friends += 1
                 print(peer_friends)
@@ -185,7 +194,11 @@ def process_inbound_udp(sock):
                                          socket.htons(HEADER_LEN + len(get_chunk_hash)), socket.htonl(0),
                                          socket.htonl(0))
                 get_pkt = get_header + get_chunk_hash
-                sock.sendto(get_pkt, from_addr)
+                if is_first_get: # 首次发送get
+                    sock.sendto(get_pkt, from_addr)
+                    is_first_get = False
+                else:
+                    get_packet_send.append([get_pkt, from_addr])
                 current_receive_seq[str(from_addr)] = 0
                 check_peers_crash[str(from_addr)] = [time.time(), from_addr]
                 chunk_peers[bytes.hex(get_chunk_hash)] = [[from_addr], 0]
@@ -234,8 +247,10 @@ def process_inbound_udp(sock):
                               0, socket.htonl(current_receive_seq[str(from_addr)]), cwnd, ssthresh, status)
 
         sock.sendto(ack_pkt, from_addr)
+
         # see if finished
-        if len(ex_received_chunk[ex_downloading_chunkhash[from_addr]]) == CHUNK_DATA_SIZE:
+        if len(ex_received_chunk[ex_downloading_chunkhash[from_addr]]) == CHUNK_DATA_SIZE and len(get_packet_send) == 0:
+
             sock.add_log('receiver all')
             peer_friends -= 1
             print(ex_downloading_chunkhash[from_addr])
@@ -274,6 +289,10 @@ def process_inbound_udp(sock):
                     print("Congrats! You have completed the example!")
                 else:
                     print("Example fails. Please check the example files carefully.")
+        if len(ex_received_chunk[ex_downloading_chunkhash[from_addr]]) == CHUNK_DATA_SIZE and len(get_packet_send) != 0:
+            sock.sendto(get_packet_send[0][0], get_packet_send[0][1])
+            get_packet_send = get_packet_send[1:]
+            chunk_hash_num += 1
     elif Type == 4:
         # received an ACK pkt
         data = pkt[header_len:]
@@ -342,7 +361,7 @@ def process_inbound_udp(sock):
                         if right > CHUNK_DATA_SIZE or left >= right:
                             break
                         sock.add_log(f'start for')
-                        next_data = config.haschunks[ex_sending_chunkhash[0]][left: right]
+                        next_data = config.haschunks[ex_sending_chunkhash[chunk_hash_num]][left: right]
                         sock.add_log(f'send in for')
                         # send next data
                         data_header = struct.pack("HBBHHIIIIB", socket.htons(52305), 44, 3, socket.htons(HEADER_LEN),
